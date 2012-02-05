@@ -1,0 +1,140 @@
+/* --------------------------------------------------------
+ * Form - general
+ * -------------------------------------------------------- */
+form {
+	label {
+		display: block;
+		margin: 0 0 2px 0;
+	}
+	fieldset {
+		border: 0;
+	}
+	.field { // Each form field is wrapped in a 'field' class
+		margin: 0 0 15px 0;
+		// Radio
+		&.group { // Align fields horizontally
+			float: left;
+			input.text {
+				margin-right: 10px;
+			}
+		}
+		input.text, textarea, select {
+			padding: 4px;
+			border: 1px solid #a7a7a7;
+			color: #000;
+			width: 200px;
+		}
+		input.text {
+
+		}
+		&.small {
+
+			input.text {
+				width: 30px;
+			}
+		}
+		textarea {
+
+		}
+		select {
+
+		}
+		&.radio {
+			ul.optionset {
+				list-style: none;
+				margin-left: 0;
+				padding-left: 0;
+				li {
+					vertical-align: middle;
+					margin-left: 0;
+					padding-left: 0;
+					input {
+						display: inline-block;
+						margin-right: 5px;
+					}
+					label {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		// Checkboxes
+		&.checkbox {
+			vertical-align: middle;
+			ul {
+				list-style-type: none;
+			}
+			input {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+			}
+			label {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				vertical-align: middle;
+			}
+			&.one { // One column checkbox set
+
+			}
+			&.two { // Two column checkbox set
+				ul {
+					float: left;
+					background-color: #ccc;
+					width: 150px;
+				}
+			}
+			&.three { // Three column checkbox set
+				ul {
+					float: left;
+					background-color: #ccc;
+					width: 150px;
+				}
+			}
+		}
+		&.error {
+			label {
+				color: red;
+			}
+			input, textarea {
+				border: 1px solid red;
+			}
+		}
+	}
+}
+
+/* --------------------------------------------------------
+ * Form - contact
+ * -------------------------------------------------------- */
+form#ContactForm_ContactForm {
+	input.text {
+		width: 250px;
+	}
+	textarea {
+		width: 300px;
+	}
+}
+
+/* --------------------------------------------------------
+ * Form - search
+ * -------------------------------------------------------- */
+form#searchForm {
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	input {
+		padding: 5px 3px;
+		&.text {
+			width: 110px;
+		}
+	}
+
+}
+
+/* --------------------------------------------------------
+ * Form - validation
+ * -------------------------------------------------------- */
+#errorBox li {
+	color:  red;
+}

@@ -1,0 +1,107 @@
+/* --------------------------------------------------------
+ * Form - general
+ * -------------------------------------------------------- */
+form label {
+  display: block;
+  margin: 0 0 2px 0;
+}
+form fieldset {
+  border: 0;
+}
+form .field {
+  margin: 0 0 15px 0;
+}
+form .field.group {
+  float: left;
+}
+form .field.group input.text {
+  margin-right: 10px;
+}
+form .field input.text, form .field textarea, form .field select {
+  padding: 4px;
+  border: 1px solid #a7a7a7;
+  color: #000;
+  width: 200px;
+}
+form .field.small input.text {
+  width: 30px;
+}
+form .field.radio ul.optionset {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+form .field.radio ul.optionset li {
+  vertical-align: middle;
+  margin-left: 0;
+  padding-left: 0;
+}
+form .field.radio ul.optionset li input {
+  display: inline-block;
+  margin-right: 5px;
+}
+form .field.radio ul.optionset li label {
+  display: inline-block;
+}
+form .field.checkbox {
+  vertical-align: middle;
+}
+form .field.checkbox ul {
+  list-style-type: none;
+}
+form .field.checkbox input {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+form .field.checkbox label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+form .field.checkbox.two ul {
+  float: left;
+  background-color: #ccc;
+  width: 150px;
+}
+form .field.checkbox.three ul {
+  float: left;
+  background-color: #ccc;
+  width: 150px;
+}
+form .field.error label {
+  color: red;
+}
+form .field.error input, form .field.error textarea {
+  border: 1px solid red;
+}
+/* --------------------------------------------------------
+ * Form - contact
+ * -------------------------------------------------------- */
+form#ContactForm_ContactForm input.text {
+  width: 250px;
+}
+form#ContactForm_ContactForm textarea {
+  width: 300px;
+}
+/* --------------------------------------------------------
+ * Form - search
+ * -------------------------------------------------------- */
+form#searchForm {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+}
+form#searchForm input {
+  padding: 5px 3px;
+}
+form#searchForm input.text {
+  width: 110px;
+}
+/* --------------------------------------------------------
+ * Form - validation
+ * -------------------------------------------------------- */
+#errorBox li {
+  color: red;
+}

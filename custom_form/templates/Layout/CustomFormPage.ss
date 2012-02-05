@@ -5,9 +5,10 @@
 <div class="l-col-full">
 	<h1>$Title</h1>
 	$Content
+
 	<% if Success %>
-		$SubmitText
+		<p>Form submitted successfully.</p>
 	<% else %>
-		$FormTemplate
+		$CustomFormTemplate
 	<% end_if %>
 </div>

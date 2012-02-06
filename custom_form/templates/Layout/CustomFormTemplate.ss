@@ -1,4 +1,6 @@
 <form $FormAttributes>
+	<!-- This is where the server-side errors should go -->
+
 	<% if Message %>
 		<p id="{$FormName}_error" class="message $MessageType">
 			$Message
@@ -10,19 +12,19 @@
 	<fieldset>
 		<ul class="messages"></ul>
 
-		<!-- Dropdown Example -->
+		<!-- Dropdown example -->
 		<div class="field dropdown">
-			<label for="$dataF	ieldByName(Dropdownfield).id">Dropdown field:</label>
+			<label for="$dataFieldByName(Dropdownfield).id">Dropdown field:</label>
 			$dataFieldByName(Dropdownfield)
 		</div>
 
-		<!-- Textfield Example -->
+		<!-- Textfield example -->
 		<div class="field text">
 			<label for="$dataFieldByName(Textfield).id">Text field:</label>
 			$dataFieldByName(Textfield)
 		</div>
 
-		<!-- Horizontal(group) Example -->
+		<!-- Horizontal example -->
 		<div class="field group text">
 			<label for="$dataFieldByName(Textfield).id">Text field horizontal one:</label>
 			$dataFieldByName(Textfield)
@@ -33,9 +35,17 @@
 			$dataFieldByName(Textfield)
 		</div>
 		<div class="clear"></div>
-		<!-- END: Horizontal Example -->
+		<!-- END: Horizontal example -->
 
-		<!-- Email Example -->
+		<!-- Phone number example -->
+		<div class="field text">
+			<label for="$dataFieldByName(Textfield).id">Phone number:</label>
+			$dataFieldByName(PhonePrefix) -
+			$dataFieldByName(Textfield) <!-- Need a class of small on this input -->
+		</div>
+		<div class="clear"></div>
+
+		<!-- Email example -->
 		<div class="field text">
 			<label for="$dataFieldByName(Email).id">Email field:</label>
 			$dataFieldByName(Emailfield)
@@ -45,25 +55,25 @@
 	<fieldset>
 		<ul class="messages"></ul>
 
-		<!-- Textarea Example -->
+		<!-- Textarea example -->
 		<div class="field textarea">
 			<label for="$dataFieldByName(Textareafield).id">Textarea field:</label>
 			$dataFieldByName(Textareafield)
 		</div>
 
-		<!-- Checkbox Example -->
+		<!-- Checkbox example -->
 		<div class="field checkbox">
 			$dataFieldByName(Checkboxfield)
 			<label for="$dataFieldByName(Checkboxfield).id">Checkbox field</label>
 		</div>
 
-		<!-- Radio Example -->
+		<!-- Radio example -->
 		<div class="field radio">
 			<label for="$dataFieldByName(OptionsetField).id">Optionset Field:</label>
 			$dataFieldByName(OptionsetField)
 		</div>
 
-		<!-- Checkbox One Column Example -->
+		<!-- Checkbox one column example -->
 		<div class="field checkbox">
 			<label for="$dataFieldByName(OneColumn).id">One Column:</label>
 			<% control dataFieldByName(OneColumn) %>
@@ -71,7 +81,7 @@
 			<% end_control %>
 		</div>
 
-		<!-- Checkbox Two Column Example -->
+		<!-- Checkbox two column example -->
 		<div class="field checkbox two clearfix">
 			<label for="$dataFieldByName(TwoColumn).id">Two Column:</label>
 			<% control dataFieldByName(TwoColumn) %>
@@ -79,7 +89,7 @@
 			<% end_control %>
 		</div>
 
-		<!-- Checkbox Three Column Example -->
+		<!-- Checkbox three column example -->
 		<div class="field checkbox three clearfix">
 			<label for="$dataFieldByName(ThreeColumn).id">Three Column:</label>
 			<% control dataFieldByName(ThreeColumn) %>

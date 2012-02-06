@@ -1,13 +1,14 @@
 <?php
 
 class CustomFormTemplate extends Form {
+	// How do I add an additional class to a form?
 
 	function __construct($controller, $name) {
 
 		$fields = new FieldSet(
 			new DropdownField(
 				'Dropdownfield',
-				'',
+				'', // What are these values for?
 				array(
 					'' => 'Select',
 					'ItemOne' => 'Item One',
@@ -16,6 +17,7 @@ class CustomFormTemplate extends Form {
 				)
 			),
 			new TextField('Textfield'),
+			new TextField('PhonePrefix', '', '', 4),
 			new EmailField('Emailfield'),
 			new TextareaField('Textareafield'),
 			new CheckboxField('Checkboxfield'),
@@ -27,7 +29,7 @@ class CustomFormTemplate extends Form {
 					'2' => 'Item two',
 					'3' => 'Item three'
 				),
-				'0'
+				'1' // Which item is checked by default
 			),
 			new CustomCheckboxSetField(
 				'TwoColumn',
@@ -40,7 +42,7 @@ class CustomFormTemplate extends Form {
 					'5' => 'Item three',
 					'6' => 'Item four'
 				),
-				'0'
+				'0' // Which item is checked by default
 			),
 			new CustomCheckboxSetField(
 				'ThreeColumn',
@@ -53,7 +55,7 @@ class CustomFormTemplate extends Form {
 					'5' => 'Item five',
 					'6' => 'Item six'
 				),
-				'0'
+				'0' // Which item is checked by default
 			),
 			new OptionsetField(
 				'OptionsetField',
@@ -61,7 +63,8 @@ class CustomFormTemplate extends Form {
 				array(
 					'OptionOne' => 'Option One',
 					'OptionTwo' => 'Option Two'
-				)
+				),
+				'OptionTwo' // Which item is checked by default
 			)
 		);
 

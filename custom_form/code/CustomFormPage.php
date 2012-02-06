@@ -3,18 +3,11 @@
 class CustomFormPage extends Page {
 
 	public static $db = array(
-		'Message' => 'HTMLText'
 	);
 
 	public static $has_one = array(
 	);
 
-	function getCMSFields() {
-		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Message'), 'Content');
-
-		return $fields;
-	}
 }
 
 class CustomFormPage_Controller extends Page_Controller {
@@ -37,6 +30,8 @@ class CustomFormPage_Controller extends Page_Controller {
 
 		// Return to submitted message
 		Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
+
+		// Need to submit data to CMS here as well...
 	}
 
 	public function Success() {
@@ -46,8 +41,8 @@ class CustomFormPage_Controller extends Page_Controller {
 	function init() {
 		parent::init();
 
-		// Custom JQuery validation
-		// Validator::set_javascript_validation_handler('none');
+		// Custom JQuery validation: Work on this after server-side completed
+		Validator::set_javascript_validation_handler('none');
 		// Requirements::javascript("custom_form/js/jquery.validate.js");
 		// Requirements::javascript("custom_form/js/CustomFormTemplatePage.js");
 	}

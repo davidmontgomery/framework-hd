@@ -1,22 +1,31 @@
 <?php
 
-class CustomFormTemplate extends Form {
+/**
+ * Always end your classes in the noun of the object
+ *
+ * E.g ContactPage is a *Page *
+ * CustomForm is Form
+ * MyController is a controller
+ */
+
+class CustomForm extends Form {
 	// How do I add an additional class to a form?
 
 	function __construct($controller, $name) {
 
 		$fields = new FieldSet(
+
 			new DropdownField(
 				'Dropdownfield',
 				'', // What are these values for?
 				array(
 					'' => 'Select',
-					'ItemOne' => 'Item One',
-					'ItemTwo' => 'Item Two',
-					'ItemThree' => 'Item Three'
+					'Key1' => 'I love ponies',
+					'Key2' => 'I hate ponies',
+					'Key3' => 'I am not fussed on ponies'
 				)
 			),
-			new TextField('Textfield'),
+			$firstname = new TextField('FirstName', 'First name:'),
 			new TextField('PhonePrefix', '', '', 4),
 			new EmailField('Emailfield'),
 			new TextareaField('Textareafield'),
@@ -72,7 +81,10 @@ class CustomFormTemplate extends Form {
 			new FormAction('SendCustomFormPage', 'Send')
 		);
 
-		$validator = new RequiredFields('Textfield');
+		$validator = new RequiredFields('FirstName');
+
+		$firstname->addExtraClass('MyTextField');
+		$firstname->setCustomValidationMessage("Yo! fill this out");
 
 		parent::__construct($controller, $name, $fields, $actions, $validator);
 	}
@@ -80,7 +92,7 @@ class CustomFormTemplate extends Form {
 	function forTemplate() {
 		return $this->renderWith(array(
 			$this->class,
-			'CustomFormTemplate'
+			'CustomForm'
 		));
 	}
 }

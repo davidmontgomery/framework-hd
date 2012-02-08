@@ -9,6 +9,6 @@
 	<% if Success %>
 		<p>Form submitted successfully.</p>
 	<% else %>
-		$CustomFormTemplate
+		$MyCustomForm
 	<% end_if %>
 </div>

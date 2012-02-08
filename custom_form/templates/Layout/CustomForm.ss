@@ -12,16 +12,31 @@
 	<fieldset>
 		<ul class="messages"></ul>
 
+
 		<!-- Dropdown example -->
+<<<<<<< HEAD
 		<div class="field dropdown">
 			<label for="$dataFieldByName(name).id">Dropdown field:</label>
 			$dataFieldByName(name)
+=======
+		<div class="field text">
+		<% control dataFieldByName(Dropdownfield) %>
+			<label for="$id">$Title</label>
+			$Field
+
+			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+		<% end_control %>
+>>>>>>> 91ad78a67a942e123108a792fbf2d89fc87506c4
 		</div>
 
 		<!-- Textfield example -->
 		<div class="field text">
-			<label for="$dataFieldByName(Textfield).id">Text field:</label>
-			$dataFieldByName(Textfield)
+		<% control dataFieldByName(FirstName) %>
+			<label for="$id">$Title</label>
+			$Field
+
+			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+		<% end_control %>
 		</div>
 
 		<!-- Horizontal example -->

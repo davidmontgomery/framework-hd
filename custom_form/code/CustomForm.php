@@ -18,31 +18,31 @@ class CustomForm extends Form {
 			$textfield = new TextField('TextField', 'Text field label:'),
 			$textfield2 = new TextField('TextField2', 'Grouped Text1:'),
 			$textfield3 = new TextField('TextField3', 'Grouped Text2:'),
-			$phoneprefix = new TextField('PhonePrefix', 'Phone Number', '', 4),
+			$phoneprefix = new TextField('PhonePrefix', 'Phone Number:', '', 4),
 			$phonenumber = new TextField('PhoneNumber'),
 			$emailfield = new EmailField('Emailfield', 'Email field:'),
 			$textareafield = new TextareaField('Textareafield', 'Textarea field:'),
-			$checkboxfield = new CheckboxField('Checkboxfield', 'Checkbox field:'),
+			$checkboxfield = new CheckboxField('MyCheckboxfield', 'Checkbox field:'),
 			$onecolumn = new CustomCheckboxSetField(
 				'OneColumn',
 				'One Column:',
 				array(
-					'1' => 'Item one',
-					'2' => 'Item two',
-					'3' => 'Item three'
+					'ItemOne' => 'Item one',
+					'ItemTwo' => 'Item two',
+					'ItemThree' => 'Item three'
 				),
-				'1'
+				'0'
 			),
 			$twocolumn = new CustomCheckboxSetField(
 				'TwoColumn',
 				'Two Column:',
 				array(
-					'1' => 'Item one',
-					'2' => 'Item two',
-					'3' => 'Item three',
-					'4' => 'Item four',
-					'5' => 'Item three',
-					'6' => 'Item four'
+					'ItemOne' => 'Item one',
+					'ItemTwo' => 'Item two',
+					'ItemThree' => 'Item three',
+					'ItemFour' => 'Item four',
+					'ItemFive' => 'Item Five',
+					'ItemSix' => 'Item Six'
 				),
 				'0'
 			),
@@ -50,23 +50,23 @@ class CustomForm extends Form {
 				'ThreeColumn',
 				'Three Column:',
 				array(
-					'1' => 'Item one',
-					'2' => 'Item two',
-					'3' => 'Item three',
-					'4' => 'Item four',
-					'5' => 'Item five',
-					'6' => 'Item six'
+					'ItemOne' => 'Item one',
+					'ItemTwo' => 'Item two',
+					'ItemThree' => 'Item three',
+					'ItemFour' => 'Item four',
+					'ItemFive' => 'Item five',
+					'ItemSix' => 'Item six'
 				),
 				'0'
 			),
 			$optionsetfield = new OptionsetField(
 				'OptionsetField',
-				'',
+				'Radio Optionset:',
 				array(
 					'OptionOne' => 'Option One',
 					'OptionTwo' => 'Option Two'
 				),
-				'OptionTwo'
+				'0'
 			)
 		);
 
@@ -79,22 +79,22 @@ class CustomForm extends Form {
 		);
 
 		// Server-side validation
-		$validator = new RequiredFields('Dropdownfield', 'TextField', 'TextField2', 'TextField3', 'Emailfield', 'OptionsetField', 'ThreeColumn', 'OneColumn', 'TwoColumn', 'Checkboxfield', 'Textareafield', 'PhonePrefix', 'PhoneNumber');
+		$validator = new RequiredFields('Dropdownfield', 'TextField', 'TextField2', 'TextField3', 'Emailfield', 'OptionsetField', 'ThreeColumn', 'OneColumn', 'TwoColumn', 'MyCheckboxfield', 'Textareafield', 'PhonePrefix', 'PhoneNumber');
 
 		// Custom validation messages
-		$dropdownfield->setCustomValidationMessage('You must select a option');
-		$textfield->setCustomValidationMessage('You must fill this out');
-		$textfield2->setCustomValidationMessage('You must fill this out');
-		$textfield3->setCustomValidationMessage('You must fill this out');
-		$phoneprefix->setCustomValidationMessage('You must fill this out');
-		$phonenumber->setCustomValidationMessage('You must fill this out');
-		$emailfield->setCustomValidationMessage('You must enter an email address');
-		$textareafield->setCustomValidationMessage('You must fill this out');
-		$checkboxfield->setCustomValidationMessage('You must fill this out');
-		$onecolumn->setCustomValidationMessage('You must fill this out');
-		$twocolumn->setCustomValidationMessage('You must fill this out');
-		$threecolumn->setCustomValidationMessage('You must fill this out');
-		$optionsetfield->setCustomValidationMessage('You must fill this out');
+		$dropdownfield->setCustomValidationMessage('Custom error message here.');
+		$textfield->setCustomValidationMessage('Custom error message here.');
+		$textfield2->setCustomValidationMessage('Custom error message here.');
+		$textfield3->setCustomValidationMessage('Custom error message here.');
+		$phoneprefix->setCustomValidationMessage('Custom error message here.');
+		$phonenumber->setCustomValidationMessage('Custom error message here.');
+		$emailfield->setCustomValidationMessage('Custom error message here.');
+		$textareafield->setCustomValidationMessage('Custom error message here.');
+		$checkboxfield->setCustomValidationMessage('Custom error message here.');
+		$onecolumn->setCustomValidationMessage('Custom error message here.');
+		$twocolumn->setCustomValidationMessage('Custom error message here.');
+		$threecolumn->setCustomValidationMessage('Custom error message here.');
+		$optionsetfield->setCustomValidationMessage('Custom error message here.');
 
 		parent::__construct($controller, $name, $fields, $actions, $validator);
 	}

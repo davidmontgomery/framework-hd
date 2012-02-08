@@ -67,10 +67,10 @@ class CustomFormPage_Controller extends Page_Controller {
 		$submissionTwo->write();
 
 
-		$From = 'hello@davidmontgomery.co.nz';
-		$To = 'hello@davidmontgomery.co.nz';
-		$Subject = 'Subject line here';
-		$email = new Email($From, $To, $Subject);
+		$from = 'hello@davidmontgomery.co.nz';
+		$to = 'hello@davidmontgomery.co.nz';
+		$subject = 'Subject line here';
+		$email = new Email($from, $to, $subject);
 
 		$email->setTemplate('ContactEmail');
 		$email->populateTemplate($data);
@@ -85,7 +85,6 @@ class CustomFormPage_Controller extends Page_Controller {
 		// Return to submitted message
 		Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
 
-		// Need to submit data to CMS here as well...
 	}
 
 	public function Success() {

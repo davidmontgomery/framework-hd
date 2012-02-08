@@ -79,8 +79,8 @@
 
 		<!-- Checkbox example -->
 		<div class="field checkbox">
-			<% control dataFieldByName(Checkboxfield) %>
-				$Field<br />
+			<% control dataFieldByName(MyCheckboxfield) %>
+				$Field
 				<label for="$id">$Title</label>
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
 			<% end_control %>
@@ -89,36 +89,36 @@
 		<!-- Radio example -->
 		<div class="field radio">
 			<% control dataFieldByName(OptionsetField) %>
-				$Field<br />
-				<label for="$id">$Title</label>
+			<label for="$id">$Title</label>
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+				$Field
 			<% end_control %>
 		</div>
 
 		<!-- Checkbox one column example -->
 		<div class="field checkbox">
 			<% control dataFieldByName(OneColumn) %>
-				<label for="$id">$Title</label>
-				$Field(1)<br />
+				<label for="$id">$Title</label><br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+				$Field(1)
 			<% end_control %>
 		</div>
 
 		<!-- Checkbox two column example -->
 		<div class="field checkbox two clearfix">
 			<% control dataFieldByName(TwoColumn) %>
-				<label for="$id">$Title</label>
-				$Field(2)<br />
+				<label for="$id">$Title</label><br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+				$Field(2)
 			<% end_control %>
 		</div>
 
 		<!-- Checkbox three column example -->
 		<div class="field checkbox three clearfix">
 			<% control dataFieldByName(ThreeColumn) %>
-				<label for="$id">$Title</label>
-				$Field(3)<br />
+				<label for="$id">$Title</label><br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+				$Field(3)
 			<% end_control %>
 		</div>
 	</fieldset>

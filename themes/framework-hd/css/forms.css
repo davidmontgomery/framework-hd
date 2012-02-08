@@ -8,6 +8,9 @@ form label {
 form fieldset {
   border: 0;
 }
+form .required {
+  color: red;
+}
 form .field {
   margin: 0 0 15px 0;
 }

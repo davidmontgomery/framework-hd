@@ -17,7 +17,7 @@ class CustomForm extends Form {
 
 			new DropdownField(
 				'Dropdownfield',
-				'', // What are these values for?
+				'Dropdown field:',
 				array(
 					'' => 'Select',
 					'Key1' => 'I love ponies',
@@ -25,7 +25,7 @@ class CustomForm extends Form {
 					'Key3' => 'I am not fussed on ponies'
 				)
 			),
-			$firstname = new TextField('FirstName', 'First name:'),
+			$textfield = new TextField('FirstName', 'First name:'),
 			new TextField('PhonePrefix', '', '', 4),
 			new EmailField('Emailfield'),
 			new TextareaField('Textareafield'),
@@ -77,14 +77,14 @@ class CustomForm extends Form {
 			)
 		);
 
+		$textfield->addExtraClass('extraclass');
+		$textfield->setCustomValidationMessage("Yo! fill this out");
+
 		$actions = new FieldSet(
 			new FormAction('SendCustomFormPage', 'Send')
 		);
 
 		$validator = new RequiredFields('FirstName');
-
-		$firstname->addExtraClass('MyTextField');
-		$firstname->setCustomValidationMessage("Yo! fill this out");
 
 		parent::__construct($controller, $name, $fields, $actions, $validator);
 	}

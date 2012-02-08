@@ -11,16 +11,16 @@
 
 	<fieldset>
 		<ul class="messages"></ul>
-		<div class="field dropdown">
-			<label for="$dataFieldByName(YourName).id">$dataFieldByName(YourName).Title</label>
-			$dataFieldByName(YourName)
-		</div>
+
 
 		<!-- Dropdown example -->
+		<div class="field text">
+		<% control dataFieldByName(Dropdownfield) %>
+			<label for="$id">$Title</label>
+			$Field
 
-		<div class="field dropdown">
-			<label for="$dataFieldByName(Dropdownfield).id">Dropdown field:</label>
-			$dataFieldByName(Dropdownfield)
+			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+		<% end_control %>
 		</div>
 
 		<!-- Textfield example -->

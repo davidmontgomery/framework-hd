@@ -12,7 +12,7 @@
 
 		<!-- Dropdown example -->
 		<div class="field text">
-			<% control dataFieldByName(Dropdownfield) %>
+			<% control dataFieldByName(DropdownField) %>
 				<label for="$id">$Title</label>
 				$Field<br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
@@ -57,7 +57,7 @@
 
 		<!-- Email example -->
 		<div class="field text">
-			<% control dataFieldByName(Emailfield) %>
+			<% control dataFieldByName(EmailField) %>
 				<label for="$id">$Title</label>
 				$Field<br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
@@ -70,7 +70,7 @@
 
 		<!-- Textarea example -->
 		<div class="field textarea">
-			<% control dataFieldByName(Textareafield) %>
+			<% control dataFieldByName(TextareaField) %>
 				<label for="$id">$Title</label>
 				$Field<br />
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
@@ -79,7 +79,7 @@
 
 		<!-- Checkbox example -->
 		<div class="field checkbox">
-			<% control dataFieldByName(MyCheckboxfield) %>
+			<% control dataFieldByName(CheckboxField) %>
 				$Field
 				<label for="$id">$Title</label>
 				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
@@ -122,8 +122,6 @@
 			<% end_control %>
 		</div>
 	</fieldset>
-
-	$dataFieldByName(SecurityID)
 
 	<% if Actions %>
 		<div class="Actions">

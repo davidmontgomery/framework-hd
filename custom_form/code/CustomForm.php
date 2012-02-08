@@ -6,7 +6,7 @@ class CustomForm extends Form {
 
 		$fields = new FieldSet(
 			$dropdownfield = new DropdownField(
-				'Dropdownfield',
+				'DropdownField',
 				'Dropdown field label:',
 				array(
 					'' => 'Select',
@@ -20,9 +20,9 @@ class CustomForm extends Form {
 			$textfield3 = new TextField('TextField3', 'Grouped Text2:'),
 			$phoneprefix = new TextField('PhonePrefix', 'Phone Number:', '', 4),
 			$phonenumber = new TextField('PhoneNumber'),
-			$emailfield = new EmailField('Emailfield', 'Email field:'),
-			$textareafield = new TextareaField('Textareafield', 'Textarea field:'),
-			$checkboxfield = new CheckboxField('MyCheckboxfield', 'Checkbox field:'),
+			$emailfield = new EmailField('EmailField', 'Email field:'),
+			$textareafield = new TextareaField('TextareaField', 'Textarea field:'),
+			$checkboxfield = new CheckboxField('CheckboxField', 'Checkbox field:'),
 			$onecolumn = new CustomCheckboxSetField(
 				'OneColumn',
 				'One Column:',
@@ -79,7 +79,8 @@ class CustomForm extends Form {
 		);
 
 		// Server-side validation
-		$validator = new RequiredFields('Dropdownfield', 'TextField', 'TextField2', 'TextField3', 'Emailfield', 'OptionsetField', 'ThreeColumn', 'OneColumn', 'TwoColumn', 'MyCheckboxfield', 'Textareafield', 'PhonePrefix', 'PhoneNumber');
+		// $validator = new RequiredFields('DropdownField', 'TextField', 'TextField2', 'TextField3', 'EmailField', 'OptionsetField', 'ThreeColumn', 'OneColumn', 'TwoColumn', 'CheckboxField', 'TextareaField', 'PhonePrefix', 'PhoneNumber');
+		$validator = new RequiredFields('TextField');
 
 		// Custom validation messages
 		$dropdownfield->setCustomValidationMessage('Custom error message here.');

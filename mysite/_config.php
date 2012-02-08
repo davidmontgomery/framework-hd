@@ -24,6 +24,8 @@ Director::set_environment_type('dev');
 Security::setDefaultAdmin('admin','pass');
 Email::setAdminEmail('hello@davidmontgomery.co.nz');
 
+Form::disable_all_security_tokens();
+
 /*
 Helpers:
 

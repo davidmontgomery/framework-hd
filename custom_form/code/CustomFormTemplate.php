@@ -7,8 +7,8 @@ class CustomFormTemplate extends Form {
 
 		$fields = new FieldSet(
 			new DropdownField(
-				'Dropdownfield',
-				'', // What are these values for?
+				'name', // ID, unique to the page
+				'', // Label
 				array(
 					'' => 'Select',
 					'ItemOne' => 'Item One',
@@ -72,9 +72,9 @@ class CustomFormTemplate extends Form {
 			new FormAction('SendCustomFormPage', 'Send')
 		);
 
-		$validator = new RequiredFields('Textfield');
+		// $validator = new RequiredFields('Textfield');
 
-		parent::__construct($controller, $name, $fields, $actions, $validator);
+		parent::__construct($controller, $name, $fields, $actions);
 	}
 
 	function forTemplate() {

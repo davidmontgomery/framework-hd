@@ -17,8 +17,11 @@ class CustomFormPage_Controller extends Page_Controller {
 		return new CustomFormTemplate($this, 'CustomFormTemplate');
 	}
 
-	function SendCustomFormPage($data) {
+	function SendCustomFormPage($data, $form) {
 		// Set data
+		echo "<pre>";
+		print_r($data);
+		die();
 		$From = 'hello@davidmontgomery.co.nz';
 		$To = 'hello@davidmontgomery.co.nz';
 		$Subject = 'Subject line here';

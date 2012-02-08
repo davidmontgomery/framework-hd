@@ -14,8 +14,8 @@
 
 		<!-- Dropdown example -->
 		<div class="field dropdown">
-			<label for="$dataFieldByName(Dropdownfield).id">Dropdown field:</label>
-			$dataFieldByName(Dropdownfield)
+			<label for="$dataFieldByName(name).id">Dropdown field:</label>
+			$dataFieldByName(name)
 		</div>
 
 		<!-- Textfield example -->

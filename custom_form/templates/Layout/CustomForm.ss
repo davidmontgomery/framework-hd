@@ -1,6 +1,4 @@
 <form $FormAttributes>
-	<!-- This is where the server-side errors should go -->
-
 	<% if Message %>
 		<p id="{$FormName}_error" class="message $MessageType">
 			$Message
@@ -12,58 +10,58 @@
 	<fieldset>
 		<ul class="messages"></ul>
 
-
 		<!-- Dropdown example -->
-<<<<<<< HEAD
-		<div class="field dropdown">
-			<label for="$dataFieldByName(name).id">Dropdown field:</label>
-			$dataFieldByName(name)
-=======
 		<div class="field text">
-		<% control dataFieldByName(Dropdownfield) %>
-			<label for="$id">$Title</label>
-			$Field
-
-			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
-		<% end_control %>
->>>>>>> 91ad78a67a942e123108a792fbf2d89fc87506c4
+			<% control dataFieldByName(Dropdownfield) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
 		<!-- Textfield example -->
 		<div class="field text">
-		<% control dataFieldByName(FirstName) %>
-			<label for="$id">$Title</label>
-			$Field
-
-			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
-		<% end_control %>
+			<% control dataFieldByName(TextField) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
-		<!-- Horizontal example -->
+		<!-- Grouped example -->
 		<div class="field group text">
-			<label for="$dataFieldByName(Textfield).id">Text field horizontal one:</label>
-			$dataFieldByName(Textfield)
+			<% control dataFieldByName(TextField2) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
 		<div class="field group text">
-			<label for="$dataFieldByName(Textfield).id">Text field horizontal two:</label>
-			$dataFieldByName(Textfield)
+			<% control dataFieldByName(TextField3) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 		<div class="clear"></div>
-		<!-- END: Horizontal example -->
+		<!-- END: Grouped example -->
 
 		<!-- Phone number example -->
 		<div class="field text">
-			<label for="$dataFieldByName(Textfield).id">Phone number:</label>
-			$dataFieldByName(PhonePrefix) -
-			$dataFieldByName(Textfield) <!-- Need a class of small on this input -->
+			<label for="$dataFieldByName(PhonePrefix).id">$dataFieldByName(PhonePrefix).Title</label>
+			$dataFieldByName(PhonePrefix) - $dataFieldByName(PhoneNumber)<br />
+			<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
 		</div>
 		<div class="clear"></div>
 
 		<!-- Email example -->
 		<div class="field text">
-			<label for="$dataFieldByName(Email).id">Email field:</label>
-			$dataFieldByName(Emailfield)
+			<% control dataFieldByName(Emailfield) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 	</fieldset>
 
@@ -72,43 +70,55 @@
 
 		<!-- Textarea example -->
 		<div class="field textarea">
-			<label for="$dataFieldByName(Textareafield).id">Textarea field:</label>
-			$dataFieldByName(Textareafield)
+			<% control dataFieldByName(Textareafield) %>
+				<label for="$id">$Title</label>
+				$Field<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
 		<!-- Checkbox example -->
 		<div class="field checkbox">
-			$dataFieldByName(Checkboxfield)
-			<label for="$dataFieldByName(Checkboxfield).id">Checkbox field</label>
+			<% control dataFieldByName(Checkboxfield) %>
+				$Field<br />
+				<label for="$id">$Title</label>
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
 		<!-- Radio example -->
 		<div class="field radio">
-			<label for="$dataFieldByName(OptionsetField).id">Optionset Field:</label>
-			$dataFieldByName(OptionsetField)
+			<% control dataFieldByName(OptionsetField) %>
+				$Field<br />
+				<label for="$id">$Title</label>
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
+			<% end_control %>
 		</div>
 
 		<!-- Checkbox one column example -->
 		<div class="field checkbox">
-			<label for="$dataFieldByName(OneColumn).id">One Column:</label>
 			<% control dataFieldByName(OneColumn) %>
-				$Field(1)
+				<label for="$id">$Title</label>
+				$Field(1)<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
 			<% end_control %>
 		</div>
 
 		<!-- Checkbox two column example -->
 		<div class="field checkbox two clearfix">
-			<label for="$dataFieldByName(TwoColumn).id">Two Column:</label>
 			<% control dataFieldByName(TwoColumn) %>
-				$Field(2)
+				<label for="$id">$Title</label>
+				$Field(2)<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
 			<% end_control %>
 		</div>
 
 		<!-- Checkbox three column example -->
 		<div class="field checkbox three clearfix">
-			<label for="$dataFieldByName(ThreeColumn).id">Three Column:</label>
 			<% control dataFieldByName(ThreeColumn) %>
-				$Field(3)
+				<label for="$id">$Title</label>
+				$Field(3)<br />
+				<% if Message %><span class="message $MessageType">$Message</span><% end_if %>
 			<% end_control %>
 		</div>
 	</fieldset>
@@ -117,7 +127,9 @@
 
 	<% if Actions %>
 		<div class="Actions">
-			<input type="submit" title="Send" value="Send" name="action_SendCustomFormPage" class="action">
+			<% control Actions %>
+				$Field
+			<% end_control %>
 		</div>
 	<% end_if %>
 </form>

@@ -7,15 +7,6 @@ class CustomFormPage extends Page {
 
 	public static $has_one = array(
 	);
-
-	//function SayHi() {
-//			$name = "Dave";
-//		echo 'hello <br />';
-//		echo "hello <br />";
-//		echo 'hello $name <br />';
-//		echo "hello $name;";
-// 		echo "hello \$name";
-	//}
 }
 
 class CustomFormPage_Controller extends Page_Controller {
@@ -26,12 +17,12 @@ class CustomFormPage_Controller extends Page_Controller {
 	}
 
 	function SendCustomFormPage($data, $form) {
-<<<<<<< HEAD
+
 		// Set data
-		echo "<pre>";
-		print_r($data);
-		die();
-=======
+		// echo "<pre>";
+		// print_r($data);
+		// die();
+
 		// echo "<pre>";
 
 		// $form is a CustomForm class
@@ -46,8 +37,8 @@ class CustomFormPage_Controller extends Page_Controller {
 
 		// print_r($form->dataFieldByName('YourName')->Title());
 
-		$dropdownObject = $form->dataFieldByName('Dropdownfield');
-		$source = $dropdownObject->getSource();
+		// $dropdownObject = $form->dataFieldByName('Dropdownfield');
+		// $source = $dropdownObject->getSource();
 
 		// echo "<h2>Source is </h2>";
 		// var_dump($source);
@@ -76,7 +67,6 @@ class CustomFormPage_Controller extends Page_Controller {
 		$submissionTwo->write();
 
 
->>>>>>> 91ad78a67a942e123108a792fbf2d89fc87506c4
 		$From = 'hello@davidmontgomery.co.nz';
 		$To = 'hello@davidmontgomery.co.nz';
 		$Subject = 'Subject line here';

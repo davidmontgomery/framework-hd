@@ -1,26 +1,19 @@
 @import "variables.less";
 
-/* --------------------------------------------------------
- * Form - general. Forms should follow a base style.
- * If there are other form types they should be added to
- * the custom form section.
- * -------------------------------------------------------- */
+// --------------------------------------------------------
+// Form: - Base style.
+// --------------------------------------------------------
 form {
-	fieldset {
-		border: 0;
-	}
-	.field { // Each form field is wrapped in a 'field' class
+	.field {
 		margin: 0 0 15px 0;
-		&.group { // Align fields horizontally
-			float: left;
-			input.text {
-				margin-right: 10px;
-			}
-		}
+
+		// Labels
 		label {
 			display: block;
 			margin: 0 0 2px 0;
 		}
+
+		// input.text, textarea, select
 		input.text, textarea, select {
 			padding: 4px;
 			border: 1px solid #a7a7a7;
@@ -28,23 +21,25 @@ form {
 			width: 200px;
 		}
 		input.text {
-			width: 250px; // Default text field size
+			width: 250px; // Default width
 			&.small {
 				width: 30px;
 			}
 			&.medium {
-				// Medium text field size
+
 			}
 			&.large {
-				// Large text field size
+
 			}
 		}
 		textarea {
-			width: 300px; // Default text field size
+			width: 300px; // Default width
 		}
 		select {
 
 		}
+
+		// Radio Buttons
 		&.radio {
 			ul.optionset {
 				list-style: none;
@@ -64,6 +59,7 @@ form {
 				}
 			}
 		}
+
 		// Checkboxes
 		&.checkbox {
 			vertical-align: middle;
@@ -97,7 +93,16 @@ form {
 				}
 			}
 		}
-		// Messages
+
+		// Group horizontally
+		&.group {
+			float: left;
+			input.text {
+				margin-right: 10px;
+			}
+		}
+
+		// Messages / errors
 		&.error {
 			label {
 				color: red;
@@ -113,25 +118,32 @@ form {
 			color:  red;
 		}
 	}
+
 	// Form buttons
 	.Actions 	{
 		.action {
-			color: #333;
+			background-color: #2361A1;
+			color: #fff;
 			text-decoration: none;
 			.css3_border_radius(5px);
 			padding: 5px 8px;
 			border: none;
 			margin-bottom: 15px;
 			&:hover {
-				color: #fff;
+				background-color: #333;
 			}
 		}
 	}
+
+	// Fieldset
+	fieldset {
+		border: 0;
+	}
 }
 
-/* --------------------------------------------------------
- * Custom Form: - search
- * -------------------------------------------------------- */
+// --------------------------------------------------------
+// Custom Form: - search
+// --------------------------------------------------------
 form#search-form {
 	position: absolute;
 	top: 40px;
@@ -144,6 +156,6 @@ form#search-form {
 	}
 }
 
-/* --------------------------------------------------------
- * Custom Form: -
- * -------------------------------------------------------- */
+// --------------------------------------------------------
+// Custom Form: -
+// --------------------------------------------------------

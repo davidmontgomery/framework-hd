@@ -526,22 +526,8 @@ html, body {
 /* --------------------------------------------------------
  * Mixins
  * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Form - general. Forms should follow a base style.
- * If there are other form types they should be added to
- * the custom form section.
- * -------------------------------------------------------- */
-form fieldset {
-  border: 0;
-}
 form .field {
   margin: 0 0 15px 0;
-}
-form .field.group {
-  float: left;
-}
-form .field.group input.text {
-  margin-right: 10px;
 }
 form .field label {
   display: block;
@@ -604,6 +590,12 @@ form .field.checkbox.three ul {
   float: left;
   width: 150px;
 }
+form .field.group {
+  float: left;
+}
+form .field.group input.text {
+  margin-right: 10px;
+}
 form .field.error label {
   color: red;
 }
@@ -617,7 +609,8 @@ form .field #errorBox li {
   color: red;
 }
 form .Actions .action {
-  color: #333;
+  background-color: #2361A1;
+  color: #fff;
   text-decoration: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -630,11 +623,11 @@ form .Actions .action {
   margin-bottom: 15px;
 }
 form .Actions .action:hover {
-  color: #fff;
+  background-color: #333;
 }
-/* --------------------------------------------------------
- * Custom Form: - search
- * -------------------------------------------------------- */
+form fieldset {
+  border: 0;
+}
 form#search-form {
   position: absolute;
   top: 40px;
@@ -647,8 +640,6 @@ form#search-form input.text {
   width: 110px;
 }
 /* --------------------------------------------------------
- * Custom Form: -
- * -------------------------------------------------------- *//* --------------------------------------------------------
  * Font-face
  * -------------------------------------------------------- */
 @font-face {

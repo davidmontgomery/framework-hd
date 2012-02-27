@@ -16,7 +16,7 @@ class Page_Controller extends ContentController {
 	public function init() {
 		parent::init();
 
-		// Favicon + RSS
+		// Favicon
 		Requirements::insertHeadTags('<link rel="shortcut icon" href="/favicon.ico?nocache=1" />');
 		Requirements::insertHeadTags('<link rel="apple-touch-icon" href="/apple-touch-icon.png" />');
 

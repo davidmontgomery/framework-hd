@@ -40,4 +40,59 @@
 	<a class="btn btn-red" href="#">Button 1</a>
 	<a class="btn btn-green" href="#">Button 2</a>
 	<a class="btn btn-blue" href="#">Button 3</a>
+
+	<div class="clear"><!-- --></div>
+
+	<h2>Grids</h2>
+	<div class="l-col-1 decorate">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="l-col-1 decorate">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="l-col-1 decorate">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="l-col-1 decorate last">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col-4 decorate">
+		<h3>&nbsp;&nbsp;l-col-4</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col-3 decorate">
+		<h3>&nbsp;&nbsp;l-col-3</h3>
+	</div>
+
+	<div class="l-col-1 decorate last">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col-2 decorate">
+		<h3>&nbsp;&nbsp;l-col-2</h3>
+	</div>
+
+	<div class="l-col-2 decorate last">
+		<h3>&nbsp;&nbsp;l-col-2</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col-1 decorate">
+		<h3>&nbsp;&nbsp;l-col-1</h3>
+	</div>
+
+	<div class="l-col-3 decorate last">
+		<h3>&nbsp;&nbsp;l-col-3</h3>
+	</div>
 </div>

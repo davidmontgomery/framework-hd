@@ -18,9 +18,9 @@
 
 		// External link
 		$("a[href*='http://']:not([href*='" + location.hostname+"']),[href*='https://']:not([href*='" + location.hostname + "'])")
-		.addClass('external_link')
-		.attr('target','_blank')
-		.attr('title','Opens new window');
+			.addClass('external_link')
+			.attr('target', '_blank')
+			.attr('title', 'Opens new window');
 
 	});
 })(jQuery);

@@ -1,4 +1,91 @@
 /* --------------------------------------------------------
+ * Mixins
+ * -------------------------------------------------------- */
+.css3_transition(@elements: all, @time: 0.5s, @easing: ease-out) {
+	-moz-transition: @elements @time @easing;
+	-o-transition: @elements @time @easing;
+	-webkit-transition: @elements @time @easing;
+	-ms-transition: @elements @time @easing;
+	transition: @elements @time @easing;
+}
+
+.css3_linear_gradient(@startcolor: #ccc, @endcolor: #eee) {
+	background-image: -moz-linear-gradient(top, @startcolor, @endcolor);
+	background-image: -o-linear-gradient(top, @startcolor, @endcolor);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, @startcolor),color-stop(1, @endcolor));
+	background-image: -webkit-linear-gradient(@startcolor, @endcolor);
+	background-image: linear-gradient(top, @startcolor, @endcolor);
+	filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d')", @startcolor, @endcolor);
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d')", @startcolor, @endcolor);
+}
+
+.css3_linear_gradient_no_ie(@startcolor: #ccc, @endcolor: #eee) {
+	background-image: -moz-linear-gradient(top, @startcolor, @endcolor);
+	background-image: -o-linear-gradient(top, @startcolor, @endcolor);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, @startcolor),color-stop(1, @endcolor));
+	background-image: -webkit-linear-gradient(@startcolor, @endcolor);
+	background-image: linear-gradient(top, @startcolor, @endcolor);
+}
+
+.css3_linear_gradient_ie(@startcolor: #ccc, @endcolor: #eee) {
+	filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d')", @startcolor, @endcolor);
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d')", @startcolor, @endcolor);
+}
+
+.css3_border_radius(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.css3_border_top_left_radius(@radius: 5px) {
+	-webkit-border-top-left-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	border-top-left-radius: @radius;
+}
+
+.css3_border_top_right_radius(@radius: 5px) {
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	border-top-right-radius: @radius;
+}
+
+.css3_border_bottom_left_radius(@radius: 5px) {
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+.css3_border_bottom_right_radius(@radius: 5px) {
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-bottom-right-radius: @radius;
+}
+
+.css3_box_shadow(@x:10px, @y:10px, @blur:5px, @color: #ccc) {
+	-moz-box-shadow: @x @y @blur @color;
+	-webkit-box-shadow: @x @y @blur @color;
+	box-shadow: @x @y @blur @color;
+}
+
+.css3_box_shadow_inset(@x:10px, @y:10px, @blur:5px, @color: #ccc) {
+	-moz-box-shadow: inset @x @y @blur @color;
+	-webkit-box-shadow: inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
+
+.css3_box_shadow_inset2(@x:10px, @y:10px, @z:10px, @blur:5px, @color: #ccc, @xb:10px, @yb:10px, @zb:10px, @blurb:5px) {
+	-moz-box-shadow: inset @x @y @z @blur @color, inset @xb @yb @zb @blurb @color;
+	-webkit-box-shadow: inset @x @y @z @blur @color, inset @xb @yb @zb @blurb @color;
+	box-shadow: inset @x @y @z @blur @color, inset @xb @yb @zb @blurb @color;
+}
+
+.clear_filter() {
+	filter: none;
+	-ms-filter: none;
+}
+
+/* --------------------------------------------------------
  * Fonts
  * -------------------------------------------------------- */
 @font_SansSerif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Trebuchet MS", "Helvetica", "Arial", "sans-serif";

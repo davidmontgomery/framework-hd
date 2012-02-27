@@ -1,5 +1,5 @@
 <div id="l-footer">
 	<div id="l-inner-footer">
-		<!-- Footer content -->
+		<p>Framework HD - &copy; 2012</p>
 	</div>
 </div>

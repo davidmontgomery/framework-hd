@@ -2,13 +2,13 @@
  * Includes
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
+ * Mixins
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
  * Fonts
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * Colours
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Mixins
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * Base
@@ -330,7 +330,7 @@ td {
   display: none;
 }
 /* --------------------------------------------------------
- * Temp
+ * Temp - delete at end of project
  * -------------------------------------------------------- */
 .decorate {
   color: #fff;
@@ -392,7 +392,7 @@ td {
   color: #333;
   display: block;
   float: left;
-  padding: 10px;
+  padding: 7px 10px;
   text-decoration: none;
 }
 .nav-primary a:hover,
@@ -412,9 +412,7 @@ td {
   width: 960px;
 }
 .l-layout {
-  padding-top: 18px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 18px 18px 0 18px;
 }
 /* --------------------------------------------------------
  * Grid System:
@@ -452,6 +450,9 @@ td {
 .padding-1 {
   padding: 10px;
 }
+.padding-2 {
+  padding: 15px;
+}
 /* --------------------------------------------------------
  * Footer
  * -------------------------------------------------------- */
@@ -461,6 +462,9 @@ td {
   margin: 0 auto;
   padding: 20px;
   width: 920px;
+}
+#l-inner-footer p {
+  color: #fff;
 }
 /* --------------------------------------------------------
  * Sticky footer
@@ -512,6 +516,15 @@ html, body {
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
+/* --------------------------------------------------------
+ * Mixins
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Fonts
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * Form - general. Forms should follow a base style.
  * If there are other form types they should be added to
@@ -602,18 +615,34 @@ form .field .required {
 form .field #errorBox li {
   color: red;
 }
+form .Actions .action {
+  color: #333;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+form .Actions .action:hover {
+  color: #fff;
+}
 /* --------------------------------------------------------
  * Custom Form: - search
  * -------------------------------------------------------- */
-form#searchForm {
+form#search-form {
   position: absolute;
   top: 40px;
   right: 15px;
 }
-form#searchForm input {
+form#search-form input {
   padding: 5px 3px;
 }
-form#searchForm input.text {
+form#search-form input.text {
   width: 110px;
 }
 /* --------------------------------------------------------
@@ -776,7 +805,7 @@ img.center {
  * Module: Breadcrumbs
  * -------------------------------------------------------- */
 .bdc {
-  color: #B7C0C5;
+  color: #b7c0c5;
   font-size: 0.9em;
   margin: 0px 5px 10px 0;
   text-align: left;
@@ -792,15 +821,18 @@ img.center {
  * Module: Button
  * -------------------------------------------------------- */
 .btn {
-  /*  Module Default */
+  /*  Default */
 
   color: #fff;
   text-decoration: none;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 5px 8px;
-  /*  Module Variations */
+  /* Variations */
 
 }
 .btn:hover {
@@ -825,6 +857,9 @@ img.center {
   color: #000;
 }
 .btn.btn-shadow {
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
@@ -877,3 +912,4 @@ img.center {
     page-break-after: avoid;
   }
 }
+/*** Custom Print ***/

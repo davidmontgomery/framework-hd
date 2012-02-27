@@ -1,4 +1,13 @@
 /* --------------------------------------------------------
+ * Mixins
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Fonts
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
  * Form - general. Forms should follow a base style.
  * If there are other form types they should be added to
  * the custom form section.
@@ -88,18 +97,31 @@ form .field .required {
 form .field #errorBox li {
   color: red;
 }
+form .Actions .action {
+  color: #333;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+form .Actions .action:hover {
+  color: #fff;
+}
 /* --------------------------------------------------------
  * Custom Form: - search
  * -------------------------------------------------------- */
-form#searchForm {
+form#search-form {
   position: absolute;
   top: 40px;
   right: 15px;
 }
-form#searchForm input {
+form#search-form input {
   padding: 5px 3px;
 }
-form#searchForm input.text {
+form#search-form input.text {
   width: 110px;
 }
 /* --------------------------------------------------------

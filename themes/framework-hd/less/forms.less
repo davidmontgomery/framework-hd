@@ -1,3 +1,5 @@
+@import "variables.less";
+
 /* --------------------------------------------------------
  * Form - general. Forms should follow a base style.
  * If there are other form types they should be added to
@@ -31,10 +33,10 @@ form {
 				width: 30px;
 			}
 			&.medium {
-
+				// Medium text field size
 			}
 			&.large {
-
+				// Large text field size
 			}
 		}
 		textarea {
@@ -111,12 +113,26 @@ form {
 			color:  red;
 		}
 	}
+	// Form buttons
+	.Actions 	{
+		.action {
+			color: #333;
+			text-decoration: none;
+			.css3_border_radius(5px);
+			padding: 5px 8px;
+			border: none;
+			margin-bottom: 15px;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
 }
 
 /* --------------------------------------------------------
  * Custom Form: - search
  * -------------------------------------------------------- */
-form#searchForm {
+form#search-form {
 	position: absolute;
 	top: 40px;
 	right: 15px;

@@ -410,7 +410,7 @@ td {
  * -------------------------------------------------------- */
 .l-col-4 {
   float: left;
-  width: 924px;
+  width: 100%;
 }
 .l-col-3 {
   float: left;
@@ -501,9 +501,27 @@ html, body {
 }
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+  #l-container {
+    width: 480px;
+  }
+  #l-inner-footer {
+    width: 440px;
+  }
+  #l-header {
+    height: 95px;
+  }
+  .nav-primary ul {
+    float: left;
+  }
+  .nav-primary li, .nav-primary a {
+    width: 100%;
+  }
+  .nav-primary a {
+    border-bottom: 1px solid #999;
+  }
 }
 /* --------------------------------------------------------
  * Temp - delete at end of project

@@ -3,28 +3,22 @@
 global $project;
 $project = 'mysite';
 
+require_once("conf/ConfigureFromEnv.php");
+
 global $databaseConfig;
-$databaseConfig = array(
-	"type" => 'MySQLDatabase',
-	"server" => 'localhost',
-	"username" => 'root',
-	"password" => 'root',
-	"database" => 'framework-hd',
-	"path" => '',
-);
+// $suffix = (Director::isTest()) ? "_staging" : ""
+// $databaseConfig["database"] = "framework-hd" . $suffix;
+
+$databaseConfig["database"] = "framework-hd";
 
 SSViewer::set_theme('framework-hd');
 // FulltextSearchable::enable();
 
 
 i18n::set_locale('en_US');
-SiteTree::enable_nested_urls();
-Director::set_environment_type('dev');
 
-Security::setDefaultAdmin('admin','pass');
 Email::setAdminEmail('hello@davidmontgomery.co.nz');
 
-Form::disable_all_security_tokens();
 
 /*
 Helpers:

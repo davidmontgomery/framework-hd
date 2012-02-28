@@ -501,9 +501,12 @@ html, body {
 }
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media only screen and (max-width: 480px) {
+html {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+@media screen and (max-width: 480px) {
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
   #l-container {
     width: 480px;
   }
@@ -514,10 +517,11 @@ html, body {
     height: 95px;
   }
   .nav-primary ul {
-    float: left;
+    width: 480px;
+    float: none;
   }
   .nav-primary li, .nav-primary a {
-    width: 100%;
+    float: none;
   }
   .nav-primary a {
     border-bottom: 1px solid #999;

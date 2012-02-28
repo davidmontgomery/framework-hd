@@ -10,6 +10,9 @@
 	<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title</title>
 </head>
 
+		<meta name = "viewport" content = "user-scalable=no, width=device-width">
+
+
 <body class="page-{$URLSegment} class-{$ClassName}">
 	<% include Accessibility %>
 

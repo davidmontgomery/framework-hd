@@ -1,18 +1,14 @@
-<div class="grid_full">
+<div class="l-col-4">
 	<% include BreadCrumbs %>
-</div><!-- /grid_full -->
 
-<div class="grid_1">
 	<h1>$Title</h1>
 	$Content
-	<% control Children.GroupedBy(Category) %>
-		<h3>Test $CategoryName</h3>
+
+	<% if Children %>
 		<ul>
 			<% control Children %>
 				<li><a href="$Link">$Title</a></li>
 			<% end_control %>
 		</ul>
-	<% end_control %>
-</div><!-- /grid_1 -->
-
-
+	<% end_if %>
+</div>

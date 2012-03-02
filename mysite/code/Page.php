@@ -34,7 +34,8 @@ class Page_Controller extends ContentController {
 		Requirements::combine_files(
 			'combined.js',
 			array(
-				$this->ThemeDir() . '/js/general.js'
+				$this->ThemeDir() . '/js/general.js',
+				$this->ThemeDir() . '/js/placeholder.js'
 			)
 		);
 

@@ -89,7 +89,7 @@ form .field .required {
 form .field #errorBox li {
   color: red;
 }
-form .Actions .action {
+form .action {
   background-color: #2361A1;
   color: #fff;
   text-decoration: none;
@@ -100,20 +100,19 @@ form .Actions .action {
   border: none;
   margin-bottom: 15px;
 }
-form .Actions .action:hover {
+form .action:hover {
   background-color: #333;
 }
 form fieldset {
   border: 0;
 }
-form#search-form {
+form.search-form {
   position: absolute;
-  top: 40px;
-  right: 15px;
+  top: 18px;
+  right: 18px;
 }
-form#search-form input {
-  padding: 5px 3px;
-}
-form#search-form input.text {
+form.search-form input.text {
+  border: 1px solid #fff;
   width: 110px;
+  padding: 4px;
 }

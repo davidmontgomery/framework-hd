@@ -6,20 +6,41 @@ $project = 'mysite';
 require_once("conf/ConfigureFromEnv.php");
 
 global $databaseConfig;
-// $suffix = (Director::isTest()) ? "_staging" : ""
-// $databaseConfig["database"] = "framework-hd" . $suffix;
 
-$databaseConfig["database"] = "framework-hd";
+$suffix = (Director::isDev()) ? "_dev" : "";
+$suffix = (Director::isTest()) ? "_test" : "";
+$suffix = (Director::isLive()) ? "_live" : "";
+
+$databaseConfig["database"] = "framework-hd" . $suffix;
+
 
 SSViewer::set_theme('framework-hd');
-// FulltextSearchable::enable();
+FulltextSearchable::enable();
 
 
 i18n::set_locale('en_US');
 
-Email::setAdminEmail('hello@davidmontgomery.co.nz');
-
-
+// Tiny_mce config: wiki.moxiecode.com Need to implement modal
+HtmlEditorConfig::get('cms')->setButtonsForLine(1,
+	'formatselect',
+	'styleselect',
+	'bold',
+	'italic',
+	'sub',
+	'sup',
+	'bullist',
+	'numlist',
+	'separator',
+	'link',
+	'unlink',
+	'anchor',
+	'separator',
+	'pasteword',
+	'code',
+	'separator'
+);
+HtmlEditorConfig::get('cms')->setButtonsForLine(2);
+HtmlEditorConfig::get('cms')->setButtonsForLine(3);
 /*
 Helpers:
 

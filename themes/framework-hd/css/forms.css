@@ -21,7 +21,7 @@ form .field input.text, form .field textarea, form .field select {
   width: 200px;
 }
 form .field input.text {
-  width: 250px;
+  width: 215px;
 }
 form .field input.text.small {
   width: 30px;

@@ -543,7 +543,7 @@ form .field input.text, form .field textarea, form .field select {
   width: 200px;
 }
 form .field input.text {
-  width: 250px;
+  width: 215px;
 }
 form .field input.text.small {
   width: 30px;
@@ -703,21 +703,21 @@ p {
 /* --------------------------------------------------------
  * Headings
  * -------------------------------------------------------- */
-h1 {
+h1, h1 a {
   color: #333;
   font-size: 24px;
   font-weight: normal;
   line-height: 18px;
   margin-bottom: 18px;
 }
-h2 {
+h2, h2 a {
   font-size: 18px;
   font-weight: normal;
   line-height: 18px;
   margin-top: 24px;
   margin-bottom: 12px;
 }
-h3 {
+h3, h3 a {
   color: #333;
   line-height: 18px;
   font-size: 14px;
@@ -725,7 +725,7 @@ h3 {
   margin-top: 24px;
   margin-bottom: 12px;
 }
-h4 {
+h4, h4 a {
   color: #333;
   font-size: 14px;
   line-height: 18px;
@@ -811,6 +811,25 @@ img.center {
  * Module: Typography - This goes where a CMS block is output.
  * These styles are specific to CMS
  * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Module: Listing
+ * -------------------------------------------------------- */
+.lst {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 25px;
+}
+.lst li {
+  border-bottom: 1px solid #999;
+}
+.lst li.last {
+  border-bottom: none;
+}
+.lst .lst-more-wrap {
+  margin-top: -10px;
+  position: relative;
+}
 /* --------------------------------------------------------
  * Module: Button
  * -------------------------------------------------------- */

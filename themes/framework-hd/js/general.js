@@ -2,7 +2,7 @@
 	$(document).ready(function() {
 
 		// Flexi-search
-		var $searchInput = $('#searchForm input.text');
+		var $searchInput = $('.search-form input.text');
 
 		$searchInput.bind('focus', function() {
 			$searchInput.animate({

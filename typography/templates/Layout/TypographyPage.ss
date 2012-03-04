@@ -79,6 +79,26 @@
 
 	<div class="clear"><!-- --></div>
 
+	<div class="l-col3 decorate">
+		<h3>&nbsp;&nbsp;l-col3</h3>
+	</div>
+
+	<div class="l-col9 decorate last">
+		<h3>&nbsp;&nbsp;l-col9</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col2 decorate">
+		<h3>&nbsp;&nbsp;l-col2</h3>
+	</div>
+
+	<div class="l-col10 decorate last">
+		<h3>&nbsp;&nbsp;l-col10</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
 	<div class="l-col4 decorate">
 		<h3>&nbsp;&nbsp;l-col4</h3>
 	</div>

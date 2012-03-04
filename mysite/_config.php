@@ -13,10 +13,8 @@ $suffix = (Director::isLive()) ? "_live" : "";
 
 $databaseConfig["database"] = "framework-hd" . $suffix;
 
-
 SSViewer::set_theme('framework-hd');
 FulltextSearchable::enable();
-
 
 i18n::set_locale('en_US');
 

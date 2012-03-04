@@ -45,55 +45,67 @@
 	<div class="clear"><!-- --></div>
 
 	<h2>Grids</h2>
-	<div class="l-col-1 decorate">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
+	<div class="l-col12 decorate">
+		<h3>&nbsp;&nbsp;l-col12</h3>
 	</div>
 
-	<div class="l-col-1 decorate">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
+	<div class="l-col6 decorate">
+		<h3>&nbsp;&nbsp;l-col6</h3>
 	</div>
 
-	<div class="l-col-1 decorate">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
-	</div>
-
-	<div class="l-col-1 decorate last">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
+	<div class="l-col6 last decorate">
+		<h3>&nbsp;&nbsp;l-col6</h3>
 	</div>
 
 	<div class="clear"><!-- --></div>
 
-	<div class="l-col-4 decorate">
-		<h3>&nbsp;&nbsp;l-col-4</h3>
+	<div class="l-col5 decorate">
+		<h3>&nbsp;&nbsp;l-col5</h3>
+	</div>
+
+	<div class="l-col7 decorate last">
+		<h3>&nbsp;&nbsp;l-col7</h3>
 	</div>
 
 	<div class="clear"><!-- --></div>
 
-	<div class="l-col-3 decorate">
-		<h3>&nbsp;&nbsp;l-col-3</h3>
+	<div class="l-col4 decorate">
+		<h3>&nbsp;&nbsp;l-col4</h3>
 	</div>
 
-	<div class="l-col-1 decorate last">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
-	</div>
-
-	<div class="clear"><!-- --></div>
-
-	<div class="l-col-2 decorate">
-		<h3>&nbsp;&nbsp;l-col-2</h3>
-	</div>
-
-	<div class="l-col-2 decorate last">
-		<h3>&nbsp;&nbsp;l-col-2</h3>
+	<div class="l-col8 decorate last">
+		<h3>&nbsp;&nbsp;l-col8</h3>
 	</div>
 
 	<div class="clear"><!-- --></div>
 
-	<div class="l-col-1 decorate">
-		<h3>&nbsp;&nbsp;l-col-1</h3>
+	<div class="l-col4 decorate">
+		<h3>&nbsp;&nbsp;l-col4</h3>
 	</div>
 
-	<div class="l-col-3 decorate last">
-		<h3>&nbsp;&nbsp;l-col-3</h3>
+	<div class="l-col4 decorate">
+		<h3>&nbsp;&nbsp;l-col4</h3>
+	</div>
+
+	<div class="l-col4 decorate last">
+		<h3>&nbsp;&nbsp;l-col4</h3>
+	</div>
+
+	<div class="clear"><!-- --></div>
+
+	<div class="l-col3 decorate">
+		<h3>&nbsp;&nbsp;l-col3</h3>
+	</div>
+
+	<div class="l-col3 decorate">
+		<h3>&nbsp;&nbsp;l-col3</h3>
+	</div>
+
+	<div class="l-col3 decorate">
+		<h3>&nbsp;&nbsp;l-col3</h3>
+	</div>
+
+	<div class="l-col3 decorate last">
+		<h3>&nbsp;&nbsp;l-col3</h3>
 	</div>
 </div>

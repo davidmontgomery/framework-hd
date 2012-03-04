@@ -330,6 +330,139 @@ td {
   display: none;
 }
 /* --------------------------------------------------------
+ * Layout: Grid: http://grid.mindplay.dk/
+ * -------------------------------------------------------- */
+#l-container {
+  background: #fff;
+  margin: 0 auto;
+  width: 968px;
+}
+.l-layout {
+  padding: 20px;
+}
+.padding-1 {
+  padding: 10px;
+}
+.padding-2 {
+  padding: 15px;
+}
+.padding-3 {
+  padding: 20px;
+}
+/* --------------------------------------------------------
+ * Grid System:
+ * Don`t define padding on grids. Each grid to have an inner
+ * div where padding can be applied
+ *
+ * Grid: http://grid.mindplay.dk/
+ * -------------------------------------------------------- */
+.l-col1 {
+  float: left;
+  margin-right: 20px;
+  width: 59px;
+}
+.l-col1.last {
+  margin-right: 0;
+}
+.l-col2 {
+  float: left;
+  margin-right: 20px;
+  width: 138px;
+}
+.l-col2.last {
+  margin-right: 0;
+}
+.l-col3 {
+  float: left;
+  margin-right: 20px;
+  width: 217px;
+}
+.l-col3.last {
+  margin-right: 0;
+}
+.l-col4 {
+  float: left;
+  margin-right: 20px;
+  width: 296px;
+}
+.l-col4.last {
+  margin-right: 0;
+}
+.l-col5 {
+  float: left;
+  margin-right: 20px;
+  width: 375px;
+}
+.l-col5.last {
+  margin-right: 0;
+}
+.l-col6 {
+  float: left;
+  margin-right: 20px;
+  width: 454px;
+}
+.l-col6.last {
+  margin-right: 0;
+}
+.l-col7 {
+  float: left;
+  margin-right: 20px;
+  width: 533px;
+}
+.l-col7.last {
+  margin-right: 0;
+}
+.l-col8 {
+  float: left;
+  margin-right: 20px;
+  width: 612px;
+}
+.l-col8.last {
+  margin-right: 0;
+}
+.l-col9 {
+  float: left;
+  margin-right: 20px;
+  width: 691px;
+}
+.l-col9.last {
+  margin-right: 0;
+}
+.l-col10 {
+  float: left;
+  margin-right: 20px;
+  width: 770px;
+}
+.l-col10.last {
+  margin-right: 0;
+}
+.l-col11 {
+  float: left;
+  margin-right: 20px;
+  width: 849px;
+}
+.l-col11.last {
+  margin-right: 0;
+}
+.l-col12 {
+  float: left;
+  margin-right: 20px;
+  width: 928px;
+}
+.l-col12.last {
+  margin-right: 0;
+}
+/* --------------------------------------------------------
+ * Header
+ * -------------------------------------------------------- */
+body {
+  font-family: 'Lucida Grande', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+  font-size: 12px;
+  background: #ccc;
+  color: #333;
+  line-height: 1;
+}
+/* --------------------------------------------------------
  * Header
  * -------------------------------------------------------- */
 #l-header {
@@ -391,56 +524,6 @@ td {
 .nav-primary a.section:hover {
   background: #fff;
   color: #2361A1;
-}
-/* --------------------------------------------------------
- * Layout
- * -------------------------------------------------------- */
-#l-container {
-  background: #fff;
-  margin: 0 auto;
-  width: 960px;
-}
-.l-layout {
-  padding: 18px 18px 0 18px;
-}
-/* --------------------------------------------------------
- * Grid System:
- * Don`t define padding on grids. Each grid to have an inner
- * div where padding can be applied
- * -------------------------------------------------------- */
-.l-col-4 {
-  float: left;
-  width: 100%;
-}
-.l-col-3 {
-  float: left;
-  width: 684px;
-  margin-right: 36px;
-}
-.l-col-3.last {
-  margin-right: 0;
-}
-.l-col-2 {
-  float: left;
-  width: 444px;
-  margin-right: 36px;
-}
-.l-col-2.last {
-  margin-right: 0;
-}
-.l-col-1 {
-  float: left;
-  margin-right: 36px;
-  width: 204px;
-}
-.l-col-1.last {
-  margin-right: 0;
-}
-.padding-1 {
-  padding: 10px;
-}
-.padding-2 {
-  padding: 15px;
 }
 /* --------------------------------------------------------
  * Footer
@@ -513,7 +596,7 @@ html {
  * -------------------------------------------------------- */
 .decorate {
   color: #fff;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   background: #ccc;
   padding: 15px 0;
 }
@@ -621,6 +704,9 @@ form .action {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: 5px 8px;
   border: none;
   margin-bottom: 15px;
@@ -642,6 +728,15 @@ form.search-form input.text {
   padding: 4px;
 }
 /* --------------------------------------------------------
+ * Fonts
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Mixins
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
  * Font-face
  * -------------------------------------------------------- */
 @font-face {
@@ -650,16 +745,6 @@ form.search-form input.text {
   src: local('☺'), url(../fonts/my-font.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-/* --------------------------------------------------------
- * General
- * -------------------------------------------------------- */
-body {
-  font-family: 'Lucida Grande', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
-  font-size: 12px;
-  background: #ccc;
-  color: #333;
-  line-height: 1;
 }
 /* --------------------------------------------------------
  * Links
@@ -844,6 +929,9 @@ img.center {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: 5px 8px;
   /* Variations */
 
@@ -870,6 +958,9 @@ img.center {
   color: #000;
 }
 .btn.btn-shadow {
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;

@@ -1,119 +1,22 @@
 /* --------------------------------------------------------
- * Header
+ * Layout: Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
-#l-header {
-	background: #7b7b7b;
-	height: 125px;
-	position: relative;
-	h1 {
-		color: #000;
-		font-size: 24px;
-		font-weight: normal;
-		margin: 0 0 6px 0;
-		a {
-			color: #000;
-			text-decoration: none;
-		}
-	}
-	.tagline {
-		color: #ccc;
-		font-size: 14px;
-		font-style: italic;
-	}
-	.branding {
-		left: 25px;
-		position: absolute;
-		top: 25px;
-	}
-}
+@layout-width: 968px; // Total page width
+@layout-margin: 20px; // Page margin either side
+@layout-gutter: 20px; // Gutter width between each column
+@layout-col-width: 59px; // Column width
 
-/* --------------------------------------------------------
- * Navigation
- * -------------------------------------------------------- */
-.nav-primary {
-	background: #999;
-	ul {
-		float: right;
-		margin: 0;
-		margin-right: 10px;
-	}
-	li {
-		margin: 0;
-		padding: 0;
-		float: left;
-		list-style: none;
-		margin-right: 2px;
-	}
-	a {
-		cursor: pointer;
-		background: #c2c2c2;
-		color: #333;
-		display: block;
-		float: left;
-		padding: 7px 10px;
-		text-decoration: none;
-		&:hover,
-		&.current,
-		&.section,
-		&.current:hover,
-		&.section:hover {
-			background: #fff;
-			color: #2361A1;
-		}
-	}
-}
-
-/* --------------------------------------------------------
- * Layout
- * -------------------------------------------------------- */
 #l-container {
 	background: #fff;
 	margin: 0 auto;
-	width: 960px;
+	width: @layout-width;
 }
 
 .l-layout {
-	padding: 18px 18px 0 18px;
+	padding: @layout-margin;
 }
 
-/* --------------------------------------------------------
- * Grid System:
- * Don`t define padding on grids. Each grid to have an inner
- * div where padding can be applied
- * -------------------------------------------------------- */
-.l-col-4 {
-	float: left;
-	width: 100%;
-}
-
-.l-col-3 {
-	float: left;
-	width: 684px;
-	margin-right: 36px;
-	&.last {
-		margin-right: 0;
-	}
-}
-
-.l-col-2 {
-	float: left;
-	width: 444px;
-	margin-right: 36px;
-	&.last {
-		margin-right: 0;
-	}
-}
-
-.l-col-1 {
-	float: left;
-	margin-right: 36px;
-	width: 204px;
-	&.last {
-		margin-right: 0;
-	}
-}
-
-// Padding
+// Inner column padding
 .padding-1 {
   padding: 10px;
 }
@@ -122,87 +25,121 @@
   padding: 15px;
 }
 
+.padding-3 {
+  padding: 20px;
+}
+
 /* --------------------------------------------------------
- * Footer
+ * Grid System:
+ * Don`t define padding on grids. Each grid to have an inner
+ * div where padding can be applied
+ *
+ * Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
-#l-inner-footer {
-	background: #333;
-	height: 110px;
-	margin: 0 auto;
-	padding: 20px;
-	width: 920px;
-	p {
-		color: #fff;
+ .l-col1 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 1) + ((@layout-gutter * 1) - @layout-gutter);
+	&.last {
+		margin-right: 0;
 	}
 }
 
-/* --------------------------------------------------------
- * Sticky footer
- * -------------------------------------------------------- */
-html, body {
-	height: 100%;
+.l-col2 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 2) + ((@layout-gutter * 2) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
-#l-container {
-	position: relative;
-	min-height: 100%;
+.l-col3 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 3) + ((@layout-gutter * 3) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
-* html #l-container {
-	height: 100%;
+.l-col4 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 4) + ((@layout-gutter * 4) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
-.l-layout {
-	padding-bottom: 150px; /* height of footer */
+.l-col5 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 5) + ((@layout-gutter * 5) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
-#l-footer {
-	background: #666;
-	height: 150px; /* height of footer */
-	margin-top: -150px;
-	position: relative;
+.l-col6 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 6) + ((@layout-gutter * 6) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
-/* --------------------------------------------------------
- * Home page
- * -------------------------------------------------------- */
-
-/* --------------------------------------------------------
- * About page
- * -------------------------------------------------------- */
-
-/* --------------------------------------------------------
- * Contact page
- * -------------------------------------------------------- */
-
-/* --------------------------------------------------------
- * Media queries
- * -------------------------------------------------------- */
-@media all and (orientation:portrait) {
-  /* Style adjustments for portrait mode goes here */
-}
-@media all and (orientation:landscape) {
-  /* Style adjustments for landscape mode goes here */
-}
-/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-
-html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
-
-@media screen and (max-width: 480px) {
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+.l-col7 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 7) + ((@layout-gutter * 7) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
 }
 
+.l-col8 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 8) + ((@layout-gutter * 8) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
+}
 
-/* --------------------------------------------------------
- * Temp - delete at end of project
- * -------------------------------------------------------- */
-.decorate {
-	color: #fff;
-	margin-bottom: 36px;
-	background: #ccc;
-	padding: 15px 0;
-	h3 {
-		margin: 0;
+.l-col9 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 9) + ((@layout-gutter * 9) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.l-col10 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 10) + ((@layout-gutter * 10) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.l-col11 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 11) + ((@layout-gutter * 11) - @layout-gutter);
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.l-col12 {
+	float: left;
+	margin-right: @layout-gutter;
+	width: (@layout-col-width * 12) + ((@layout-gutter * 12) - @layout-gutter);
+	&.last {
+		margin-right: 0;
 	}
 }

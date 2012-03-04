@@ -1,8 +1,8 @@
-<div class="l-col-full">
+<div class="l-col12">
 	<% include BreadCrumbs %>
 </div>
 
-<div class="l-col-full">
+<div class="l-col12">
 	<h1>$Title</h1>
 	$Content
 	$Form

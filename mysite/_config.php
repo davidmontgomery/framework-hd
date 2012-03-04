@@ -20,6 +20,9 @@ FulltextSearchable::enable();
 
 i18n::set_locale('en_US');
 
+Page::$icon = array('themes/framework-hd/images/tree-icons/page','file');
+ErrorPage::$icon = array('themes/framework-hd/images/tree-icons/error','file');
+
 // Tiny_mce config: wiki.moxiecode.com Need to implement modal
 HtmlEditorConfig::get('cms')->setButtonsForLine(1,
 	'formatselect',

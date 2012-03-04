@@ -1,6 +1,8 @@
 <?php
 
 class ContactPage extends Page {
+	static $icon = array('themes/framework-hd/images/tree-icons/contact', 'file');
+
 	static $db = array(
 		'MailTo' => 'Varchar(100)',
 		'SubmitText' => 'HTMLText'

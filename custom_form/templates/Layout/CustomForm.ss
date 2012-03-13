@@ -123,6 +123,10 @@
 		</div>
 	</fieldset>
 
+	<% control dataFieldByName(SecurityID) %>
+			$Field
+	<% end_control %>
+
 	<% if Actions %>
 		<div class="Actions">
 			<% control Actions %>

@@ -3,15 +3,26 @@
 global $project;
 $project = 'mysite';
 
-require_once("conf/ConfigureFromEnv.php");
-
 global $databaseConfig;
 
-$suffix = (Director::isDev()) ? "_dev" : "";
-$suffix = (Director::isTest()) ? "_test" : "";
-$suffix = (Director::isLive()) ? "_live" : "";
+/*** Local Details ***/
+// require_once("conf/ConfigureFromEnv.php");
+// $databaseConfig["database"] = "framework-hd";
 
-$databaseConfig["database"] = "framework-hd" . $suffix;
+
+/*** Heyday Details ***/
+$databaseConfig = array(
+	'type' => 'MySQLDatabase',
+	'server' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'framework-hd',
+);
+
+Security::setDefaultAdmin('admin','pass');
+Director::set_environment_type('dev');
+
+/*** END: ***/
 
 SSViewer::set_theme('framework-hd');
 FulltextSearchable::enable();

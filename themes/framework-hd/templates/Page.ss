@@ -15,19 +15,17 @@
 <body class="page-{$URLSegment} class-{$ClassName}">
 	<% include Accessibility %>
 
-	<div class="l-container">
-		<div class="l-header">
-			<div class="l-center">
-				$SearchForm
-				<% include Branding %>
-				<% include Navigation %>
-			</div>
+	<div class="l-header">
+		<div class="l-center">
+			$SearchForm
+			<% include Branding %>
+			<% include Navigation %>
 		</div>
+	</div>
 
-		<div class="l-layout clearfix">
-			<div class="l-center clearfix">
-				$Layout
-			</div>
+	<div class="l-layout clearfix">
+		<div class="l-center clearfix">
+			$Layout
 		</div>
 	</div>
 

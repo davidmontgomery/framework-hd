@@ -20,11 +20,9 @@
 			</li>
 		<% end_control %>
 	</ul>
-
 <% else %>
 	<p>No results were found. Please try another search term.</p>
 <% end_if %>
-
 <% if Results.MoreThanOnePage %>
 	<div class="pagination">
 		<% if Results.NextLink %>

@@ -338,15 +338,9 @@ td {
   background-color: #f2f2f2;
 }
 .l-layout .l-center {
-  width: 940px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
   background-color: #fff;
-  min-height: 500px;
-  height: auto !important;
-  height: 500px;
+  padding: 20px;
+  width: 940px;
 }
 .l-header {
   background-color: #7b7b7b;
@@ -355,26 +349,6 @@ td {
   background-color: #7b7b7b;
   height: 125px;
   position: relative;
-}
-.l-header h1 {
-  color: #000;
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0 0 6px 0;
-}
-.l-header h1 a {
-  color: #000;
-  text-decoration: none;
-}
-.l-header .tagline {
-  color: #ccc;
-  font-size: 14px;
-  font-style: italic;
-}
-.l-header .branding {
-  left: 25px;
-  position: absolute;
-  top: 25px;
 }
 .l-footer .l-center {
   height: 150px;
@@ -506,6 +480,7 @@ td {
 .l-col12.last {
   margin-right: 0;
 }
+/*** Remove ***/
 .decorate {
   color: #fff;
   margin-bottom: 20px;
@@ -513,6 +488,11 @@ td {
 }
 .decorate h3 {
   margin: 0;
+}
+.l-layout .l-center {
+  min-height: 500px;
+  height: auto !important;
+  height: 500px;
 }
 /* --------------------------------------------------------
  * Mixins
@@ -658,6 +638,11 @@ body {
   color: #333;
   line-height: 1;
 }
+.branding {
+  left: 25px;
+  position: absolute;
+  top: 25px;
+}
 /* --------------------------------------------------------
  * Links
  * -------------------------------------------------------- */
@@ -758,7 +743,7 @@ q {
   background: #eee;
 }
 /* --------------------------------------------------------
- * Navigation:
+ *  Navigation:
  * -------------------------------------------------------- */
 .nav-primary {
   background: #999;
@@ -795,7 +780,7 @@ q {
   color: #2361A1;
 }
 /* --------------------------------------------------------
- * Module: Breadcrumbs
+ * Breadcrumbs
  * -------------------------------------------------------- */
 .bdc {
   color: #b7c0c5;
@@ -807,11 +792,11 @@ q {
   margin: 0;
 }
 /* --------------------------------------------------------
- * Module: Typography - This goes where a CMS block is output.
+ * Typography - This goes where a CMS block is output.
  * These styles are specific to CMS
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
- * Module: Listing
+ * Listing
  * -------------------------------------------------------- */
 .lst {
   padding: 0;
@@ -830,7 +815,7 @@ q {
   position: relative;
 }
 /* --------------------------------------------------------
- * Module: Button
+ * Buttons
  * -------------------------------------------------------- */
 .btn {
   /*  Default */
@@ -883,7 +868,7 @@ q {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
 }
 /* --------------------------------------------------------
- * Module: Tables
+ * Tables
  * -------------------------------------------------------- */
 table {
   margin: 0 0 18px 0;

@@ -10,6 +10,10 @@ class StaffHolder extends Page {
 	);
 
 	static $allowed_children = array('StaffPage');
+
+	function Categories() {
+		return DataObject::get('StaffCategory');
+	}
 }
 
 class StaffHolder_Controller extends Page_Controller {

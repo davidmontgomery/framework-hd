@@ -17,14 +17,17 @@
 
 	<div class="l-container">
 		<div class="l-header">
-			$SearchForm
-			<% include Branding %>
+			<div class="l-center">
+				$SearchForm
+				<% include Branding %>
+				<% include Navigation %>
+			</div>
 		</div>
 
-		<% include Navigation %>
-
 		<div class="l-layout clearfix">
-			$Layout
+			<div class="l-center clearfix">
+				$Layout
+			</div>
 		</div>
 	</div>
 

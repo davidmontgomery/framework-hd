@@ -1,21 +1,49 @@
 /* --------------------------------------------------------
+ * Grid: http://grid.mindplay.dk/
+ * -------------------------------------------------------- */
+@layout-total-width: 980px; // Pixels
+@layout-margin: 20px; // Margins
+@layout-gutter: 20px; // Gutters
+@layout-col-width: 60px; // Col (First value in green column)
+
+@layout-width: (@layout-total-width - (2 * @layout-margin));
+
+
+/* --------------------------------------------------------
  * Structure
  * -------------------------------------------------------- */
 .l-container {
-	background: #fff;
-	margin: 0 auto;
-	width: @layout-width;
 }
 
 .l-center {
-	width: @layout-width;
+	width: @layout-total-width;
+	position: relative;
 	margin: 0 auto;
 }
 
+.l-layout {
+	background-color: #f2f2f2;
+	.l-center {
+		width: @layout-width;
+		padding-left: @layout-margin;
+		padding-right: @layout-margin;
+		padding-top: 20px;
+		padding-bottom: 50px;
+		background-color: #fff;
+
+		min-height: 500px;
+   	height: auto !important;
+   	height: 500px;
+	}
+}
+
 .l-header {
-	background: #7b7b7b;
-	height: 125px;
-	position: relative;
+	background-color: #7b7b7b;
+	.l-center {
+		background-color: #7b7b7b;
+		height: 125px;
+		position: relative;
+	}
 	h1 {
 		color: #000;
 		font-size: 24px;
@@ -38,10 +66,11 @@
 	}
 }
 
-.l-layout {
-	padding: @layout-margin;
+.l-footer {
+	.l-center {
+		height: 150px;
+	}
 }
-
 
 /* --------------------------------------------------------
  * Helpers
@@ -77,46 +106,11 @@
 
 
 /* --------------------------------------------------------
- * Sticky footer
- * -------------------------------------------------------- */
-html, body {
-	height: 100%;
-}
-
-.l-container {
-	position: relative;
-	min-height: 100%;
-}
-
-* html #l-container {
-	height: 100%;
-}
-
-.l-layout {
-	padding-bottom: 150px; /* height of footer */
-}
-
-.l-footer {
-	background: #666;
-	height: 150px; /* height of footer */
-	margin-top: -150px;
-	position: relative;
-}
-
-
-/* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner
  * div where padding can be applied
- *
- * Grid: http://grid.mindplay.dk/ | http://modulargrid.org/#app
  * -------------------------------------------------------- */
-@layout-width: 968px; // Total page width
-@layout-margin: 20px; // Page margin either side
-@layout-gutter: 20px; // Gutter width between each column
-@layout-col-width: 59px; // Column width
-
- .l-col1 {
+.l-col1 {
 	float: left;
 	margin-right: @layout-gutter;
 	width: (@layout-col-width * 1) + ((@layout-gutter * 1) - @layout-gutter);
@@ -129,6 +123,7 @@ html, body {
 	float: left;
 	margin-right: @layout-gutter;
 	width: (@layout-col-width * 2) + ((@layout-gutter * 2) - @layout-gutter);
+	margin-right: @layout-gutter;
 	&.last {
 		margin-right: 0;
 	}
@@ -227,7 +222,7 @@ html, body {
 .decorate {
 	color: #fff;
 	margin-bottom: 20px;
-	background: #ccc;
+	background: #f2f2f2;
 	padding: 15px 0;
 	h3 {
 		margin: 0;

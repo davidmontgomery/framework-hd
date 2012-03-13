@@ -324,19 +324,35 @@ td {
   display: none;
 }
 /* --------------------------------------------------------
+ * Grid: http://grid.mindplay.dk/
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
  * Structure
  * -------------------------------------------------------- */
-.l-container {
-  background: #fff;
-  margin: 0 auto;
-  width: 968px;
-}
 .l-center {
-  width: 968px;
+  width: 980px;
+  position: relative;
   margin: 0 auto;
+}
+.l-layout {
+  background-color: #f2f2f2;
+}
+.l-layout .l-center {
+  width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  min-height: 500px;
+  height: auto !important;
+  height: 500px;
 }
 .l-header {
-  background: #7b7b7b;
+  background-color: #7b7b7b;
+}
+.l-header .l-center {
+  background-color: #7b7b7b;
   height: 125px;
   position: relative;
 }
@@ -360,8 +376,8 @@ td {
   position: absolute;
   top: 25px;
 }
-.l-layout {
-  padding: 20px;
+.l-footer .l-center {
+  height: 150px;
 }
 /* --------------------------------------------------------
  * Helpers
@@ -389,42 +405,14 @@ td {
   margin-bottom: 10px;
 }
 /* --------------------------------------------------------
- * Sticky footer
- * -------------------------------------------------------- */
-html, body {
-  height: 100%;
-}
-.l-container {
-  position: relative;
-  min-height: 100%;
-}
-* html #l-container {
-  height: 100%;
-}
-.l-layout {
-  padding-bottom: 150px;
-  /* height of footer */
-
-}
-.l-footer {
-  background: #666;
-  height: 150px;
-  /* height of footer */
-
-  margin-top: -150px;
-  position: relative;
-}
-/* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner
  * div where padding can be applied
- *
- * Grid: http://grid.mindplay.dk/ | http://modulargrid.org/#app
  * -------------------------------------------------------- */
 .l-col1 {
   float: left;
   margin-right: 20px;
-  width: 59px;
+  width: 60px;
 }
 .l-col1.last {
   margin-right: 0;
@@ -432,7 +420,8 @@ html, body {
 .l-col2 {
   float: left;
   margin-right: 20px;
-  width: 138px;
+  width: 140px;
+  margin-right: 20px;
 }
 .l-col2.last {
   margin-right: 0;
@@ -440,7 +429,7 @@ html, body {
 .l-col3 {
   float: left;
   margin-right: 20px;
-  width: 217px;
+  width: 220px;
 }
 .l-col3.last {
   margin-right: 0;
@@ -448,7 +437,7 @@ html, body {
 .l-col4 {
   float: left;
   margin-right: 20px;
-  width: 296px;
+  width: 300px;
 }
 .l-col4.last {
   margin-right: 0;
@@ -456,7 +445,7 @@ html, body {
 .l-col5 {
   float: left;
   margin-right: 20px;
-  width: 375px;
+  width: 380px;
 }
 .l-col5.last {
   margin-right: 0;
@@ -464,7 +453,7 @@ html, body {
 .l-col6 {
   float: left;
   margin-right: 20px;
-  width: 454px;
+  width: 460px;
 }
 .l-col6.last {
   margin-right: 0;
@@ -472,7 +461,7 @@ html, body {
 .l-col7 {
   float: left;
   margin-right: 20px;
-  width: 533px;
+  width: 540px;
 }
 .l-col7.last {
   margin-right: 0;
@@ -480,7 +469,7 @@ html, body {
 .l-col8 {
   float: left;
   margin-right: 20px;
-  width: 612px;
+  width: 620px;
 }
 .l-col8.last {
   margin-right: 0;
@@ -488,7 +477,7 @@ html, body {
 .l-col9 {
   float: left;
   margin-right: 20px;
-  width: 691px;
+  width: 700px;
 }
 .l-col9.last {
   margin-right: 0;
@@ -496,7 +485,7 @@ html, body {
 .l-col10 {
   float: left;
   margin-right: 20px;
-  width: 770px;
+  width: 780px;
 }
 .l-col10.last {
   margin-right: 0;
@@ -504,7 +493,7 @@ html, body {
 .l-col11 {
   float: left;
   margin-right: 20px;
-  width: 849px;
+  width: 860px;
 }
 .l-col11.last {
   margin-right: 0;
@@ -512,7 +501,7 @@ html, body {
 .l-col12 {
   float: left;
   margin-right: 20px;
-  width: 928px;
+  width: 940px;
 }
 .l-col12.last {
   margin-right: 0;
@@ -520,7 +509,7 @@ html, body {
 .decorate {
   color: #fff;
   margin-bottom: 20px;
-  background: #ccc;
+  background: #f2f2f2;
   padding: 15px 0;
 }
 .decorate h3 {
@@ -774,11 +763,13 @@ q {
  * -------------------------------------------------------- */
 .nav-primary {
   background: #999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .nav-primary ul {
   float: right;
   margin: 0;
-  margin-right: 10px;
 }
 .nav-primary li {
   margin: 0;

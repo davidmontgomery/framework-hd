@@ -1,4 +1,40 @@
  /* --------------------------------------------------------
+ * Navigation:
+ * -------------------------------------------------------- */
+.nav-primary {
+	background: #999;
+	ul {
+		float: right;
+		margin: 0;
+		margin-right: 10px;
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		float: left;
+		list-style: none;
+		margin-right: 2px;
+	}
+	a {
+		cursor: pointer;
+		background: #c2c2c2;
+		color: #333;
+		display: block;
+		float: left;
+		padding: 7px 10px;
+		text-decoration: none;
+		&:hover,
+		&.current,
+		&.section,
+		&.current:hover,
+		&.section:hover {
+			background: #fff;
+			color: #2361A1;
+		}
+	}
+}
+
+ /* --------------------------------------------------------
  * Module: Breadcrumbs
  * -------------------------------------------------------- */
 .bdc {
@@ -73,4 +109,18 @@
 	&.btn-shadow {
 		.css3_box_shadow(0px 0px 2px rgba(0, 0, 0, .85))
 	}
+}
+
+/* --------------------------------------------------------
+ * Module: Tables
+ * -------------------------------------------------------- */
+table {
+	margin: 0 0 18px 0;
+	color: #666;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid #999;
+	padding: 5px;
 }

@@ -15,8 +15,8 @@
 <body class="page-{$URLSegment} class-{$ClassName}">
 	<% include Accessibility %>
 
-	<div id="l-container">
-		<div id="l-header">
+	<div class="l-container">
+		<div class="l-header">
 			$SearchForm
 			<% include Branding %>
 		</div>

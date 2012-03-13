@@ -20,7 +20,7 @@ class Page_Controller extends ContentController {
 		Requirements::insertHeadTags('<link rel="shortcut icon" href="/favicon.ico?nocache=1" />');
 		Requirements::insertHeadTags('<link rel="apple-touch-icon" href="/apple-touch-icon.png" />');
 
-		// JS - Head
+		// JS (Head section)
 		Requirements::insertHeadTags('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>');
 		Requirements::insertHeadTags('<script src="' . $this->ThemeDir() . '/js/modernizr-1.7.min.js"></script>');
 

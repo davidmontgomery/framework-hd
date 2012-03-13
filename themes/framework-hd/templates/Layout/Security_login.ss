@@ -1,10 +1,6 @@
-<div class="l-col12">
-	<% include BreadCrumbs %>
-</div>
+<% include BreadCrumbs %>
 
-<div class="l-col12">
-	<h1>$Title</h1>
-	$Content
-	$Form
-	$PageComments
-</div>
+<h1>$Title</h1>
+$Content
+$Form
+$PageComments

@@ -18,7 +18,7 @@
 
 		// External link
 		$("a[href*='http://']:not([href*='" + location.hostname+"']),[href*='https://']:not([href*='" + location.hostname + "'])")
-			.addClass('external_link')
+			.addClass('external-link')
 			.attr('target', '_blank')
 			.attr('title', 'Opens new window');
 

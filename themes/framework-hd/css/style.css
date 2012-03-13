@@ -1,11 +1,5 @@
 /* --------------------------------------------------------
- * Includes
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Fonts
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Colours
+ * Style includes:
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * Mixins
@@ -330,36 +324,69 @@ td {
   display: none;
 }
 /* --------------------------------------------------------
- * Layout: Grid: http://grid.mindplay.dk/
+ * Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
-#l-container {
-  background: #fff;
+/* --------------------------------------------------------
+ * Structure
+ * -------------------------------------------------------- */
+.l-center {
+  width: 980px;
+  position: relative;
   margin: 0 auto;
-  width: 968px;
 }
 .l-layout {
-  padding: 20px;
+  background-color: #f2f2f2;
 }
-.padding-1 {
+.l-layout .l-center {
+  background-color: #fff;
+  padding: 20px;
+  width: 940px;
+}
+.l-header {
+  background-color: #7b7b7b;
+}
+.l-header .l-center {
+  background-color: #7b7b7b;
+  height: 125px;
+  position: relative;
+}
+.l-footer .l-center {
+  height: 150px;
+}
+/* --------------------------------------------------------
+ * Helpers
+ * -------------------------------------------------------- */
+.padding-10 {
   padding: 10px;
 }
-.padding-2 {
+.padding-15 {
   padding: 15px;
 }
-.padding-3 {
+.padding-20 {
   padding: 20px;
+}
+/*** Margin ***/
+.margin-top-0 {
+  margin-top: 0;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-bot-0 {
+  margin-bottom: 0;
+}
+.margin-bot-10 {
+  margin-bottom: 10px;
 }
 /* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner
  * div where padding can be applied
- *
- * Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
 .l-col1 {
   float: left;
   margin-right: 20px;
-  width: 59px;
+  width: 60px;
 }
 .l-col1.last {
   margin-right: 0;
@@ -367,7 +394,8 @@ td {
 .l-col2 {
   float: left;
   margin-right: 20px;
-  width: 138px;
+  width: 140px;
+  margin-right: 20px;
 }
 .l-col2.last {
   margin-right: 0;
@@ -375,7 +403,7 @@ td {
 .l-col3 {
   float: left;
   margin-right: 20px;
-  width: 217px;
+  width: 220px;
 }
 .l-col3.last {
   margin-right: 0;
@@ -383,7 +411,7 @@ td {
 .l-col4 {
   float: left;
   margin-right: 20px;
-  width: 296px;
+  width: 300px;
 }
 .l-col4.last {
   margin-right: 0;
@@ -391,7 +419,7 @@ td {
 .l-col5 {
   float: left;
   margin-right: 20px;
-  width: 375px;
+  width: 380px;
 }
 .l-col5.last {
   margin-right: 0;
@@ -399,7 +427,7 @@ td {
 .l-col6 {
   float: left;
   margin-right: 20px;
-  width: 454px;
+  width: 460px;
 }
 .l-col6.last {
   margin-right: 0;
@@ -407,7 +435,7 @@ td {
 .l-col7 {
   float: left;
   margin-right: 20px;
-  width: 533px;
+  width: 540px;
 }
 .l-col7.last {
   margin-right: 0;
@@ -415,7 +443,7 @@ td {
 .l-col8 {
   float: left;
   margin-right: 20px;
-  width: 612px;
+  width: 620px;
 }
 .l-col8.last {
   margin-right: 0;
@@ -423,7 +451,7 @@ td {
 .l-col9 {
   float: left;
   margin-right: 20px;
-  width: 691px;
+  width: 700px;
 }
 .l-col9.last {
   margin-right: 0;
@@ -431,7 +459,7 @@ td {
 .l-col10 {
   float: left;
   margin-right: 20px;
-  width: 770px;
+  width: 780px;
 }
 .l-col10.last {
   margin-right: 0;
@@ -439,7 +467,7 @@ td {
 .l-col11 {
   float: left;
   margin-right: 20px;
-  width: 849px;
+  width: 860px;
 }
 .l-col11.last {
   margin-right: 0;
@@ -447,168 +475,25 @@ td {
 .l-col12 {
   float: left;
   margin-right: 20px;
-  width: 928px;
+  width: 940px;
 }
 .l-col12.last {
   margin-right: 0;
 }
-/* --------------------------------------------------------
- * Header
- * -------------------------------------------------------- */
-body {
-  font-family: 'Lucida Grande', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
-  font-size: 12px;
-  background: #ccc;
-  color: #333;
-  line-height: 1;
-}
-/* --------------------------------------------------------
- * Header
- * -------------------------------------------------------- */
-#l-header {
-  background: #7b7b7b;
-  height: 125px;
-  position: relative;
-}
-#l-header h1 {
-  color: #000;
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0 0 6px 0;
-}
-#l-header h1 a {
-  color: #000;
-  text-decoration: none;
-}
-#l-header .tagline {
-  color: #ccc;
-  font-size: 14px;
-  font-style: italic;
-}
-#l-header .branding {
-  left: 25px;
-  position: absolute;
-  top: 25px;
-}
-/* --------------------------------------------------------
- * Navigation
- * -------------------------------------------------------- */
-.nav-primary {
-  background: #999;
-}
-.nav-primary ul {
-  float: right;
-  margin: 0;
-  margin-right: 10px;
-}
-.nav-primary li {
-  margin: 0;
-  padding: 0;
-  float: left;
-  list-style: none;
-  margin-right: 2px;
-}
-.nav-primary a {
-  cursor: pointer;
-  background: #c2c2c2;
-  color: #333;
-  display: block;
-  float: left;
-  padding: 7px 10px;
-  text-decoration: none;
-}
-.nav-primary a:hover,
-.nav-primary a.current,
-.nav-primary a.section,
-.nav-primary a.current:hover,
-.nav-primary a.section:hover {
-  background: #fff;
-  color: #2361A1;
-}
-/* --------------------------------------------------------
- * Footer
- * -------------------------------------------------------- */
-#l-inner-footer {
-  background: #333;
-  height: 110px;
-  margin: 0 auto;
-  padding: 20px;
-  width: 920px;
-}
-#l-inner-footer p {
-  color: #fff;
-}
-/* --------------------------------------------------------
- * Sticky footer
- * -------------------------------------------------------- */
-html, body {
-  height: 100%;
-}
-#l-container {
-  position: relative;
-  min-height: 100%;
-}
-* html #l-container {
-  height: 100%;
-}
-.l-layout {
-  padding-bottom: 150px;
-  /* height of footer */
-
-}
-#l-footer {
-  background: #666;
-  height: 150px;
-  /* height of footer */
-
-  margin-top: -150px;
-  position: relative;
-}
-/* --------------------------------------------------------
- * Home page
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * About page
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Contact page
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Media queries
- * -------------------------------------------------------- */
-@media all and (orientation: portrait) {
-  /* Style adjustments for portrait mode goes here */
-}
-@media all and (orientation: landscape) {
-  /* Style adjustments for landscape mode goes here */
-}
-/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-html {
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-}
-@media screen and (max-width: 480px) {
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-}
-/* --------------------------------------------------------
- * Temp - delete at end of project
- * -------------------------------------------------------- */
+/*** Remove ***/
 .decorate {
   color: #fff;
   margin-bottom: 20px;
-  background: #ccc;
-  padding: 15px 0;
+  background: #f2f2f2;
 }
 .decorate h3 {
   margin: 0;
 }
-/* --------------------------------------------------------
- * Fonts
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Colours
- * -------------------------------------------------------- */
+.l-layout .l-center {
+  min-height: 500px;
+  height: auto !important;
+  height: 500px;
+}
 /* --------------------------------------------------------
  * Mixins
  * -------------------------------------------------------- */
@@ -728,23 +613,35 @@ form.search-form input.text {
   padding: 4px;
 }
 /* --------------------------------------------------------
- * Fonts
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
- * Colours
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
  * Mixins
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
- * Font-face
+ * Fonts
  * -------------------------------------------------------- */
 @font-face {
-  font-family: 'Font Italic';
+  font-family: 'My Font';
   src: url(../fonts/my-font.eot);
   src: local('☺'), url(../fonts/my-font.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+/* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * General
+ * -------------------------------------------------------- */
+body {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px;
+  background: #ccc;
+  color: #333;
+  line-height: 1;
+}
+.branding {
+  left: 25px;
+  position: absolute;
+  top: 25px;
 }
 /* --------------------------------------------------------
  * Links
@@ -756,7 +653,7 @@ a:hover {
   color: #000000;
   text-decoration: none;
 }
-a.external_link {
+a.external-link {
   background: url(/themes/framework-hd/images/temp/icon-external.png) no-repeat 100% 1px;
   padding-right: 12px;
 }
@@ -837,7 +734,7 @@ q {
  * Pre
  * -------------------------------------------------------- */
 .pre {
-  font-family: "Courier New", "Courier";
+  font-family: 'Courier New', 'Courier';
   display: block;
   font-size: 1.2em;
   margin: 2em 5em;
@@ -846,42 +743,44 @@ q {
   background: #eee;
 }
 /* --------------------------------------------------------
- * Tables
+ *  Navigation:
  * -------------------------------------------------------- */
-table {
-  margin: 0 0 18px 0;
-  color: #666;
-  border-collapse: collapse;
+.nav-primary {
+  background: #999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
-td {
-  border: 1px solid #999;
-  padding: 5px;
-}
-/* --------------------------------------------------------
- * Images
- * -------------------------------------------------------- */
-img {
-  border: none;
-}
-img.right {
+.nav-primary ul {
   float: right;
-  margin-left: 20px;
+  margin: 0;
 }
-img.left {
+.nav-primary li {
+  margin: 0;
+  padding: 0;
   float: left;
+  list-style: none;
+  margin-right: 2px;
 }
-img.leftAlone {
-  float: left;
-  margin-right: 100%;
-}
-img.center {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
+.nav-primary a {
+  cursor: pointer;
+  background: #c2c2c2;
+  color: #333;
   display: block;
+  float: left;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+.nav-primary a:hover,
+.nav-primary a.current,
+.nav-primary a.section,
+.nav-primary a.current:hover,
+.nav-primary a.section:hover {
+  background: #fff;
+  color: #2361A1;
 }
 /* --------------------------------------------------------
- * Module: Breadcrumbs
+ * Breadcrumbs
  * -------------------------------------------------------- */
 .bdc {
   color: #b7c0c5;
@@ -893,11 +792,11 @@ img.center {
   margin: 0;
 }
 /* --------------------------------------------------------
- * Module: Typography - This goes where a CMS block is output.
+ * Typography - This goes where a CMS block is output.
  * These styles are specific to CMS
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
- * Module: Listing
+ * Listing
  * -------------------------------------------------------- */
 .lst {
   padding: 0;
@@ -916,7 +815,7 @@ img.center {
   position: relative;
 }
 /* --------------------------------------------------------
- * Module: Button
+ * Buttons
  * -------------------------------------------------------- */
 .btn {
   /*  Default */
@@ -967,6 +866,33 @@ img.center {
   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85) 10px 5px #cccccc;
+}
+/* --------------------------------------------------------
+ * Tables
+ * -------------------------------------------------------- */
+table {
+  margin: 0 0 18px 0;
+  color: #666;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid #999;
+  padding: 5px;
+}
+@media all and (orientation: portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+@media all and (orientation: landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+html {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+@media screen and (max-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
 }
 /* --------------------------------------------------------
  * Print

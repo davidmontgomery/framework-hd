@@ -16,6 +16,7 @@ class StaffPage extends Page {
 
 		$fields->addFieldToTab('Root.Content.Main', new TextField('Position'), 'Content');
 		$fields->addFieldToTab('Root.Content.Main', new ImageField('StaffPhoto', 'Staff Photo'), 'Content');
+
 		$fields->addFieldToTab('Root.Content.Category', new HasOneDataObjectManager($this, 'Category', 'StaffCategory', array(
 			'CategoryName' => 'CategoryName'
 		), 'Content'));

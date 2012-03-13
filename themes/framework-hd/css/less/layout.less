@@ -1,42 +1,86 @@
 /* --------------------------------------------------------
- * Layout: Grid: http://grid.mindplay.dk/
+ * Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
-@layout-width: 968px; // Total page width
-@layout-margin: 20px; // Page margin either side
-@layout-gutter: 20px; // Gutter width between each column
-@layout-col-width: 59px; // Column width
+@layout-total-width: 980px; // Pixels
+@layout-margin: 20px; // Margins
+@layout-gutter: 20px; // Gutters
+@layout-col-width: 60px; // Col (First value in green column)
 
-#l-container {
-	background: #fff;
+@layout-width: (@layout-total-width - (2 * @layout-margin));
+
+/* --------------------------------------------------------
+ * Structure
+ * -------------------------------------------------------- */
+.l-container {}
+
+.l-center {
+	width: @layout-total-width;
+	position: relative;
 	margin: 0 auto;
-	width: @layout-width;
 }
 
 .l-layout {
-	padding: @layout-margin;
+	background-color: #f2f2f2;
+	.l-center {
+		background-color: #fff;
+		padding: @layout-margin;
+		width: @layout-width;
+	}
 }
 
-// Inner column padding
-.padding-1 {
+.l-header {
+	background-color: #7b7b7b;
+	.l-center {
+		background-color: #7b7b7b;
+		height: 125px;
+		position: relative;
+	}
+}
+
+.l-footer {
+	.l-center {
+		height: 150px;
+	}
+}
+
+/* --------------------------------------------------------
+ * Helpers
+ * -------------------------------------------------------- */
+.padding-10 {
   padding: 10px;
 }
 
-.padding-2 {
+.padding-15 {
   padding: 15px;
 }
 
-.padding-3 {
+.padding-20 {
   padding: 20px;
+}
+
+/*** Margin ***/
+.margin-top-0 {
+	margin-top: 0;
+}
+
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.margin-bot-0 {
+	margin-bottom: 0;
+}
+
+.margin-bot-10 {
+	margin-bottom: 10px;
 }
 
 /* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner
  * div where padding can be applied
- *
- * Grid: http://grid.mindplay.dk/
  * -------------------------------------------------------- */
- .l-col1 {
+.l-col1 {
 	float: left;
 	margin-right: @layout-gutter;
 	width: (@layout-col-width * 1) + ((@layout-gutter * 1) - @layout-gutter);
@@ -49,6 +93,7 @@
 	float: left;
 	margin-right: @layout-gutter;
 	width: (@layout-col-width * 2) + ((@layout-gutter * 2) - @layout-gutter);
+	margin-right: @layout-gutter;
 	&.last {
 		margin-right: 0;
 	}
@@ -142,4 +187,20 @@
 	&.last {
 		margin-right: 0;
 	}
+}
+
+/*** Remove ***/
+.decorate {
+	color: #fff;
+	margin-bottom: 20px;
+	background: #f2f2f2;
+	h3 {
+		margin: 0;
+	}
+}
+
+.l-layout .l-center {
+	min-height: 500px;
+ 	height: auto !important;
+ 	height: 500px;
 }

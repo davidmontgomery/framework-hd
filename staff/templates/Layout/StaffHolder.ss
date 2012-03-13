@@ -4,10 +4,16 @@
 	<h1>$Title</h1>
 	$Content
 
-	<% if Children %>
+	<% if Categories %>
 		<ul>
-			<% control Children %>
-				<li><a href="$Link">$Title</a></li>
+			<% control Categories %>
+				<% if StaffPages %>
+					<h2>$CategoryName</h2>
+
+					<% control StaffPages %>
+						<li><a href="$Link">$Title</a></li>
+				<% end_control %>
+				<% end_if %>
 			<% end_control %>
 		</ul>
 	<% end_if %>

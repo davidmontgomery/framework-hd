@@ -1,9 +1,14 @@
 @import "variables.less";
+
 /* --------------------------------------------------------
- * Font-face
+ * Fonts
  * -------------------------------------------------------- */
+@font-sans: 'Helvetica', 'Arial', 'sans-serif';
+@font-serif: 'Times New Roman', 'Times', 'serif';
+
+
 @font-face {
-	font-family: 'Font Italic';
+	font-family: 'My Font';
 	src: url(../fonts/my-font.eot);
 	src: local('☺'), url(../fonts/my-font.ttf) format('truetype');
 	font-weight: normal;
@@ -11,17 +16,41 @@
 }
 
 /* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
+@link-main: #2361a1;
+@link-main-hover: #000;
+@color-main: #333;
+
+/* --------------------------------------------------------
+ * General
+ * -------------------------------------------------------- */
+ body {
+	font-family: @font-sans;
+	font-size: 12px;
+	background: #ccc;
+	color: #333;
+	line-height: 1;
+}
+
+.branding {
+	left: 25px;
+	position: absolute;
+	top: 25px;
+}
+
+/* --------------------------------------------------------
  * Links
  * -------------------------------------------------------- */
 a {
-	color: @link_color;
+	color: @link-main;
 	&:hover {
-		color: @link_color_hover;
+		color: @link-main-hover;
 		text-decoration: none;
 	}
 }
 
-a.external_link {
+a.external-link {
 	background: url(/themes/framework-hd/images/temp/icon-external.png) no-repeat 100% 1px;
 	padding-right: 12px;
 }
@@ -121,53 +150,11 @@ q {
  * Pre
  * -------------------------------------------------------- */
 .pre {
-	font-family: "Courier New", "Courier";
+	font-family: 'Courier New', 'Courier';
 	display: block;
 	font-size: 1.2em;
 	margin: 2em 5em;
 	padding: 0.5em;
 	border: 1px #ccc solid;
 	background:#eee;
-}
-
-/* --------------------------------------------------------
- * Tables
- * -------------------------------------------------------- */
-table {
-	margin: 0 0 18px 0;
-	color: #666;
-	border-collapse: collapse;
-}
-
-td {
-	border: 1px solid #999;
-	padding: 5px;
-}
-
-/* --------------------------------------------------------
- * Images
- * -------------------------------------------------------- */
-img {
-	border: none;
-}
-
-img.right {
-	float: right;
-	margin-left: 20px;
-}
-
-img.left {
-	float: left;
-}
-
-img.leftAlone {
-	float: left;
-	margin-right: 100%;
-}
-
-img.center {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
 }

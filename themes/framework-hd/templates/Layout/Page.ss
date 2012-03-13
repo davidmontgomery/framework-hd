@@ -1,6 +1,4 @@
-<div class="l-col12">
-	<% include BreadCrumbs %>
-</div>
+<% include BreadCrumbs %>
 
 <div class="l-col9">
 	<h1>$Title</h1>

@@ -2,8 +2,8 @@
 	$(document).ready(function() {
 
 		// http:docs.jquery.com/Plugins/Validation/validate
-		$("#CustomFormTemplate_CustomFormTemplate").validate({
-			//debug: true,
+		$("#ContactForm_MyContactForm").validate({
+			// debug: true,
 			// highlight adds a class of errorClass on the field div
 			highlight: function(element, errorClass, validClass) {
 				$(element).addClass(errorClass).removeClass(validClass);
@@ -15,34 +15,53 @@
 		  },
 			errorElement: "span",
 			errorClass: "error",
-			errorPlacement: function(label, elem) {
-					var test = label.text();
-			    elem.closest("fieldset").find(".messages").append(test);
-			  },
-			wrapper: "li",
-			/* Adds to success message to the top list
+			validClass: "success",
+			errorContainer: ".message-box",
+			errorLabelContainer: ".message-box",
+			wrapper: "",
+			/*
 			success: function (label) {
 				label.addClass("valid").text("Ok!");
 			},
-
+			*/
 			/*
 			submitHandler: function() {
 				alert("Submitted!");
 			},
 			*/
 			rules: {
-				Textfield: {
+				FirstName: {
 					required: true,
+					minlength: 2
+				},
+				Email: {
+					required: true,
+					email: true
+				},
+				Message: {
+					required: true
+				},
+				LastName: {
+					required: true
 				}
 			},
 			messages: {
-				Textfield: {
-					required: "This  field is required."
+				FirstName: {
+					required: "Your first name is required. ",
+					minlength: jQuery.format("At least {0} characters required!")
+				},
+				LastName: {
+					required: "You must read the terms and conditions. "
+				},
+				Email: {
+					required: "The email is required. ",
+					email: "Please provide a valid email address"
+				},
+				Message: {
+					required: "The message is required. "
 				}
 			}
 		});
 
 	})
 })(jQuery);
-
-

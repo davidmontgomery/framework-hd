@@ -6,9 +6,9 @@ class ContactForm extends Form {
 
 		$fields = new FieldSet(
 			$firstname = new TextField('FirstName', 'First Name:'),
-			$lastname = new TextField('LastName', 'Last Name:'),
-			$email = new EmailField('Email', 'Email:'),
-			$message = new TextareaField('Message', 'Message:')
+			$lastname  = new TextField('LastName', 'Last Name:'),
+			$email     = new EmailField('Email', 'Email:'),
+			$message   = new TextareaField('Message', 'Message:')
 		);
 
 		// Extra classes example
@@ -17,6 +17,7 @@ class ContactForm extends Form {
 		// Actions
 		$actions = new FieldSet();
 		$actions->push(new FormAction('SendContactForm', 'Send'));
+
 		// Server-side validation
 		$validator = new RequiredFields('FirstName', 'LastName', 'Email');
 

@@ -43,8 +43,8 @@ class ContactFormPage_Controller extends Page_Controller {
 	function init() {
 		parent::init();
 
-		// Validator::set_javascript_validation_handler('none');
-		// Requirements::javascript("custom_form/js/jquery.validate.js");
-		// Requirements::javascript("custom_form/js/CustomFormTemplatePage.js");
+		Validator::set_javascript_validation_handler('none');
+		Requirements::javascript('contact_form/js/jquery.validate.js');
+		Requirements::javascript('contact_form/js/ContactFormPage.js');
 	}
 }

@@ -356,6 +356,7 @@ td {
 /* --------------------------------------------------------
  * Helpers
  * -------------------------------------------------------- */
+/*** Padding ***/
 .padding-10 {
   padding: 10px;
 }
@@ -626,7 +627,7 @@ form.search-form input.text {
   font-style: normal;
 }
 /* --------------------------------------------------------
- * Colours
+ * Variables
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * General
@@ -708,34 +709,6 @@ h4, h4 a {
   line-height: 18px;
   font-weight: bold;
   margin-bottom: 6px;
-}
-/* --------------------------------------------------------
- * Quotes
- * -------------------------------------------------------- */
-blockquote {
-  margin: 10px;
-  font-size: 1.4em;
-  color: #777;
-  font-style: italic;
-}
-q {
-  display: block;
-  font-size: 0.8em;
-  margin: 1em 1em;
-  padding: 0.5em;
-  border: 1px #ccc solid;
-}
-/* --------------------------------------------------------
- * Pre
- * -------------------------------------------------------- */
-.pre {
-  font-family: 'Courier New', 'Courier';
-  display: block;
-  font-size: 1.2em;
-  margin: 2em 5em;
-  padding: 0.5em;
-  border: 1px #ccc solid;
-  background: #eee;
 }
 /* --------------------------------------------------------
  *  Navigation:

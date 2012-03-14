@@ -8,7 +8,7 @@
 	<% end_if %>
 
 	<fieldset>
-		<ul class="messages"></ul>
+		<div class="message-box"></div>
 
 		<div class="field text">
 			<% control dataFieldByName(FirstName) %>

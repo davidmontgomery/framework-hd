@@ -7,5 +7,5 @@ class CustomSubmissionAdmin extends ModelAdmin {
    );
 
   static $url_segment = 'customformsubmissions';
-  static $menu_title = 'Submissions Admin';
+  static $menu_title = 'Custom Submissions';
 }

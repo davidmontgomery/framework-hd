@@ -638,11 +638,6 @@ body {
   color: #333;
   line-height: 1;
 }
-.branding {
-  left: 25px;
-  position: absolute;
-  top: 25px;
-}
 /* --------------------------------------------------------
  * Links
  * -------------------------------------------------------- */
@@ -778,6 +773,19 @@ q {
 .nav-primary a.section:hover {
   background: #fff;
   color: #2361A1;
+}
+.branding a {
+  left: 19px;
+  position: absolute;
+  top: 37px;
+  display: block;
+  background: url(/themes/framework-hd/images/logo.png) no-repeat 0 0;
+  width: 157px;
+  height: 49px;
+}
+.branding span {
+  position: absolute;
+  left: -9999em;
 }
 /* --------------------------------------------------------
  * Breadcrumbs

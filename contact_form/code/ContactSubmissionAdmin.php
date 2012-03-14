@@ -7,5 +7,5 @@ class ContactSubmissionAdmin extends ModelAdmin {
    );
 
   static $url_segment = 'contactformsubmissions';
-  static $menu_title = 'Submissions Admin';
+  static $menu_title = 'Contact Submissions';
 }

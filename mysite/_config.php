@@ -6,20 +6,20 @@ $project = 'mysite';
 global $databaseConfig;
 
 /*** Local Details ***/
-// require_once("conf/ConfigureFromEnv.php");
-// $databaseConfig["database"] = "framework-hd";
+require_once("conf/ConfigureFromEnv.php");
+$databaseConfig["database"] = "dev_framework-hd";
 
 
 /*** Heyday Details ***/
-$databaseConfig = array(
-	'type' => 'MySQLDatabase',
-	'server' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'framework-hd',
-);
+// $databaseConfig = array(
+// 	'type' => 'MySQLDatabase',
+// 	'server' => 'localhost',
+// 	'username' => 'root',
+// 	'password' => 'root',
+// 	'database' => 'framework-hd',
+// );
 
-Security::setDefaultAdmin('admin','pass');
+Security::setDefaultAdmin('admin', 'pass');
 Director::set_environment_type('dev');
 
 /*** END: ***/

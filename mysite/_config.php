@@ -7,7 +7,7 @@ global $databaseConfig;
 
 /*** Local Details ***/
 require_once("conf/ConfigureFromEnv.php");
-$databaseConfig["database"] = "ss_framework-hd";
+$databaseConfig["database"] = "framework-hd";
 
 
 /*** Heyday Details ***/

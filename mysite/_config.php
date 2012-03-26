@@ -6,9 +6,7 @@ $project = 'mysite';
 global $databaseConfig;
 
 /*** Local Details ***/
-require_once("conf/ConfigureFromEnv.php");
-$databaseConfig["database"] = "framework-hd";
-
+require_once('conf/ConfigureFromEnv.php');
 
 /*** Heyday Details ***/
 // $databaseConfig = array(

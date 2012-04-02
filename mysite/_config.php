@@ -17,16 +17,16 @@ require_once('conf/ConfigureFromEnv.php');
 // 	'database' => 'framework-hd',
 // );
 
-Security::setDefaultAdmin('admin', 'pass');
+// Security::setDefaultAdmin('admin', 'pass');
+
+
 Director::set_environment_type('dev');
-
-/*** END: ***/
-
 SSViewer::set_theme('framework-hd');
 FulltextSearchable::enable();
-
 i18n::set_locale('en_US');
 
+
+// Icons
 Page::$icon = array('themes/framework-hd/images/tree-icons/page','file');
 ErrorPage::$icon = array('themes/framework-hd/images/tree-icons/error','file');
 
@@ -51,6 +51,7 @@ HtmlEditorConfig::get('cms')->setButtonsForLine(1,
 );
 HtmlEditorConfig::get('cms')->setButtonsForLine(2);
 HtmlEditorConfig::get('cms')->setButtonsForLine(3);
+
 /*
 Helpers:
 

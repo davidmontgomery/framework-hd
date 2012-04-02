@@ -7,7 +7,12 @@ global $databaseConfig;
 
 require_once('conf/ConfigureFromEnv.php');
 
-Director::set_environment_type('dev');
+Director::set_dev_servers(array(
+	'localhost',
+	'127.0.0.1',
+	'framework-hd'
+));
+
 
 if (Director::isTest()) {
 	BasicAuth::protect_entire_site();
@@ -23,9 +28,22 @@ MathSpamProtection::setEnabled();
 SSAkismet::setAPIKey('key');
 SSAkismet::setSaveSpam(true);
 
+// Comments
+PageComment::enableModeration();
+PageCommentInterface::set_comments_require_login(true);
+
+// Errors
+SS_Log::add_writer(new SS_LogEmailWriter('me@mydomain.com'), SS_Log::ERR);
+SS_Log::add_writer(new SS_LogFileWriter('error_log.txt'), SS_Log::ERR);
+
 // Icons
 Page::$icon = array('themes/framework-hd/images/tree-icons/page','file');
 ErrorPage::$icon = array('themes/framework-hd/images/tree-icons/error','file');
+
+SortableDataObject::add_sortable_classes(array(
+	'DataObject',
+	'AnotherDataObject'
+));
 
 // Tiny_mce config: wiki.moxiecode.com Need to implement modal
 HtmlEditorConfig::get('cms')->setButtonsForLine(1,

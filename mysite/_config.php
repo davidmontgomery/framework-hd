@@ -5,26 +5,23 @@ $project = 'mysite';
 
 global $databaseConfig;
 
-/*** Local Details ***/
 require_once('conf/ConfigureFromEnv.php');
 
-/*** Heyday Details ***/
-// $databaseConfig = array(
-// 	'type' => 'MySQLDatabase',
-// 	'server' => 'localhost',
-// 	'username' => 'root',
-// 	'password' => 'root',
-// 	'database' => 'framework-hd',
-// );
-
-// Security::setDefaultAdmin('admin', 'pass');
-
-
 Director::set_environment_type('dev');
-SSViewer::set_theme('framework-hd');
-FulltextSearchable::enable();
-i18n::set_locale('en_US');
 
+if (Director::isTest()) {
+	BasicAuth::protect_entire_site();
+}
+
+SSViewer::set_theme('framework-hd');
+
+FulltextSearchable::enable();
+i18n::set_locale('en_NZ');
+
+// Spam
+MathSpamProtection::setEnabled();
+SSAkismet::setAPIKey('key');
+SSAkismet::setSaveSpam(true);
 
 // Icons
 Page::$icon = array('themes/framework-hd/images/tree-icons/page','file');
@@ -52,12 +49,12 @@ HtmlEditorConfig::get('cms')->setButtonsForLine(1,
 HtmlEditorConfig::get('cms')->setButtonsForLine(2);
 HtmlEditorConfig::get('cms')->setButtonsForLine(3);
 
-/*
-Helpers:
-
 if (Director::isDev()) {
 	SSViewer::flush_template_cache();
 }
+
+/*
+Helpers:
 
 To prevent SS from removing the hash and making urls:
 SSViewer::setOption('rewriteHashlinks', false);
@@ -87,3 +84,13 @@ Validation:
 Validator::set_javascript_validation_handler('none');
 
 */
+
+/*** Heyday Details ***/
+// $databaseConfig = array(
+// 	'type' => 'MySQLDatabase',
+// 	'server' => 'localhost',
+// 	'username' => 'root',
+// 	'password' => 'root',
+// 	'database' => 'framework-hd',
+// );
+// Security::setDefaultAdmin('admin', 'pass');

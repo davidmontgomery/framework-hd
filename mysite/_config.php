@@ -7,12 +7,6 @@ global $databaseConfig;
 
 require_once('conf/ConfigureFromEnv.php');
 
-Director::set_dev_servers(array(
-	'localhost',
-	'127.0.0.1',
-	'framework-hd'
-));
-
 
 if (Director::isTest()) {
 	BasicAuth::protect_entire_site();

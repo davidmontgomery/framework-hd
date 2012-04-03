@@ -34,10 +34,7 @@ SS_Log::add_writer(new SS_LogFileWriter('error_log.txt'), SS_Log::ERR);
 Page::$icon = array('themes/framework-hd/images/tree-icons/page','file');
 ErrorPage::$icon = array('themes/framework-hd/images/tree-icons/error','file');
 
-SortableDataObject::add_sortable_classes(array(
-	'DataObject',
-	'AnotherDataObject'
-));
+
 
 // Tiny_mce config: wiki.moxiecode.com Need to implement modal
 HtmlEditorConfig::get('cms')->setButtonsForLine(1,

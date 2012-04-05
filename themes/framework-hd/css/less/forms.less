@@ -1,19 +1,18 @@
 @import "variables.less";
 
 // --------------------------------------------------------
-// Form: - Base style.
+// Form: - Base
 // --------------------------------------------------------
 form {
+	fieldset {
+		border: 0;
+	}
 	.field {
 		margin: 0 0 15px 0;
-
-		// Labels
 		label {
 			display: block;
 			margin: 0 0 2px 0;
 		}
-
-		// input.text, textarea, select
 		input.text, textarea, select {
 			padding: 4px;
 			border: 1px solid #a7a7a7;
@@ -21,101 +20,15 @@ form {
 			width: 200px;
 		}
 		input.text {
-			width: 215px; // Default width
-			&.small {
-				width: 30px;
-			}
-			&.medium {
-
-			}
-			&.large {
-
-			}
+			width: 215px;
 		}
 		textarea {
-			width: 300px; // Default width
-		}
-		select {
-
+			width: 300px;
 		}
 
-		// Radio Buttons
-		&.radio {
-			ul.optionset {
-				list-style: none;
-				margin-left: 0;
-				padding-left: 0;
-				li {
-					vertical-align: middle;
-					margin-left: 0;
-					padding-left: 0;
-					input {
-						display: inline-block;
-						margin-right: 5px;
-					}
-					label {
-						display: inline-block;
-					}
-				}
-			}
-		}
-
-		// Checkboxes
-		&.checkbox {
-			vertical-align: middle;
-			ul {
-				list-style-type: none;
-			}
-			input {
-				display: inline-block;
-				*display: inline;
-				*zoom: 1;
-			}
-			label {
-				display: inline-block;
-				*display: inline;
-				*zoom: 1;
-				vertical-align: middle;
-			}
-			&.one { // One column checkbox set
-
-			}
-			&.two { // Two column checkbox set
-				ul {
-					float: left;
-					width: 150px;
-				}
-			}
-			&.three { // Three column checkbox set
-				ul {
-					float: left;
-					width: 150px;
-				}
-			}
-		}
-
-		// Group horizontally
-		&.group {
-			float: left;
-			input.text {
-				margin-right: 10px;
-			}
-		}
-
-		// Messages / errors
-		&.error {
-			label {
-				color: red;
-			}
-			input, textarea {
-				border: 1px solid red;
-			}
-		}
+		// Errors
 		.required {
 			color: red;
-		}
-		#errorBox li {
-			color:  red;
 		}
 	}
 
@@ -128,15 +41,9 @@ form {
 		padding: 5px 8px;
 		border: none;
 		margin-bottom: 15px;
-
 		&:hover {
 			background-color: #333;
 		}
-	}
-
-	// Fieldset
-	fieldset {
-		border: 0;
 	}
 }
 

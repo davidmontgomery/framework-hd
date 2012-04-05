@@ -1,5 +1,0 @@
-SiteTree:
-	firstrun:
-		URLSegment: firstrun
-	additionrun:
-		URLSegment: additionrun

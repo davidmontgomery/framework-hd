@@ -12,6 +12,9 @@ if (Director::isTest()) {
 	BasicAuth::protect_entire_site();
 }
 
+// Email
+define('EMAIL', 'hello@davidmontgomery.co.nz');
+
 SSViewer::set_theme('framework-hd');
 
 FulltextSearchable::enable();

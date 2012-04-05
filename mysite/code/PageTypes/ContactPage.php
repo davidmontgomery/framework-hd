@@ -5,13 +5,16 @@ class ContactPage extends Page {
 
 	static $db = array(
 		'MailTo' => 'Varchar(100)',
-		'SubmitText' => 'HTMLText'
+		'SubmitText' => 'HTMLText',
+		'Subject' => 'Varchar(100)'
 	);
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Email', new TextField('MailTo', 'Email address'));
+		$fields->addFieldToTab('Root.Content.Email', new TextField('MailTo', 'Recipient'));
+		$fields->addFieldToTab('Root.Content.Email', new TextField('Subject', 'Email Subject'));
 		$fields->addFieldToTab('Root.Content.Email', new HTMLEditorField('SubmitText', 'Success Message'));
+
 		return $fields;
 	}
 }
@@ -20,23 +23,34 @@ class ContactPage_Controller extends Page_Controller {
 
 	function ContactForm() {
 		$fields = new fieldset(
-			new TextField('Name', 'Name'),
-			new TextField('Email', 'Email')
+			new TextField('Name', 'Name:'),
+			new TextField('Email', 'Email:')
 		);
 
 		$actions = new fieldset(new FormAction('SendContactForm', 'Submit'));
-
-		$validator = new RequiredFields('Name');
+		$validator = new RequiredFields('Name', 'Email');
 
 		return new Form($this, 'ContactForm', $fields, $actions, $validator);
 	}
 
 	function SendContactForm($data, $form) {
-		$From = $data['Email'];
-		$To = $this->Mailto;
-		$Subject = "My online enquiry";
+		$from = $data['Email'];
+		$to = $this->MailTo;
+		$subject = $this->Subject;
 
-		$email = new Email($From, $MailTo, $Subject);
+		if (!empty($this->MailTo)) {
+			$email = $this->MailTo;
+		} else {
+			$email = EMAIL;
+		}
+
+		if (!empty($this->Subject)) {
+			$subject = $this->Subject;
+		} else {
+			$subject = "My online enquiry";
+		}
+
+		$email = new Email($from, $email, $subject);
 		$email->setTemplate('ContactEmail');
 		$email->populateTemplate($data);
 		$email->send();

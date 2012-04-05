@@ -1,0 +1,11 @@
+[06-Apr-2012 10:35:55] Error at sapphire/core/model/MySQLDatabase.php line 525: Couldn't run query: 
+SELECT "SiteTree"."ClassName", "SiteTree"."Created", "SiteTree"."LastEdited", "SiteTree"."URLSegment", "SiteTree"."Title", "SiteTree"."MenuTitle", "SiteTree"."Content", "SiteTree"."MetaTitle", "SiteTree"."MetaDescription", "SiteTree"."MetaKeywords", "SiteTree"."ExtraMeta", "SiteTree"."ShowInMenus", "SiteTree"."ShowInSearch", "SiteTree"."HomepageForDomain", "SiteTree"."ProvideComments", "SiteTree"."Sort", "SiteTree"."HasBrokenFile", "SiteTree"."HasBrokenLink", "SiteTree"."Status", "SiteTree"."ReportClass", "SiteTree"."CanViewType", "SiteTree"."CanEditType", "SiteTree"."ToDo", "SiteTree"."Version", "SiteTree"."ParentID", "ContactPage"."MailTo", "ContactPage"."SubmitText", "ContactPage"."Subject", "ErrorPage"."ErrorCode", "RedirectorPage"."RedirectionType", "RedirectorPage"."ExternalURL", "RedirectorPage"."LinkToID", "VirtualPage"."VersionID", "VirtualPage"."CopyContentFromID", "SiteTree"."ID", CASE WHEN "SiteTree"."ClassName" IS NOT NULL THEN "SiteTree"."ClassName" ELSE 'SiteTree' END AS "RecordClassName"
+FROM "SiteTree"
+LEFT JOIN "ContactPage" ON "ContactPage"."ID" = "SiteTree"."ID"
+LEFT JOIN "ErrorPage" ON "ErrorPage"."ID" = "SiteTree"."ID"
+LEFT JOIN "RedirectorPage" ON "RedirectorPage"."ID" = "SiteTree"."ID"
+LEFT JOIN "VirtualPage" ON "VirtualPage"."ID" = "SiteTree"."ID"
+WHERE ("HomepageForDomain" LIKE '%framework-hd%')
+ORDER BY "Sort" 
+
+Unknown column 'ContactPage.Subject' in 'field list' (http://framework-hd/)

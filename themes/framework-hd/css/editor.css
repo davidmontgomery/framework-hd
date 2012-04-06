@@ -38,7 +38,7 @@ a:hover {
   text-decoration: none;
 }
 a.external-link {
-  background: url(/themes/framework-hd/images/temp/icon-external.png) no-repeat 100% 1px;
+  background: url(../images/temp/icon-external.png) no-repeat 100% 1px;
   padding-right: 12px;
 }
 /* --------------------------------------------------------
